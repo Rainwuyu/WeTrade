@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="108dp"
-        android:layout_marginTop="172dp"
+        android:layout_marginTop="148dp"
         android:text="WeTrade"
         android:textAlignment="center"
         android:textColor="@color/design_default_color_secondary_variant"
@@ -32,6 +32,75 @@
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/enterIDFieldContainer"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="401dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="40dp"
+        app:boxStrokeColor="#f4eb49"
+        app:counterEnabled="true"
+        app:counterMaxLength="6"
+        app:endIconMode="clear_text"
+        app:helperText="Please input your login ID"
+        app:helperTextEnabled="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+
+        <EditText
+            android:id="@+id/enterIDField"
+            style="@android:style/Widget.AutoCompleteTextView"
+
+            android:layout_width="287dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="76dp"
+            android:ems="10"
+            android:focusableInTouchMode="true"
+            android:fontFamily="sans-serif"
+            android:hint="Login ID"
+            android:inputType="textPersonName"
+            android:maxLength="6"
+            android:textSize="24sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/enterPswdFieldContainer"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="401dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="40dp"
+        app:boxStrokeColor="#f4eb49"
+        app:counterEnabled="true"
+        app:counterMaxLength="6"
+        app:endIconMode="clear_text"
+        app:helperText="Please input your password"
+        app:helperTextEnabled="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterIDFieldContainer">
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <EditText
+        android:id="@+id/enterPswdField"
+        style="@android:style/Widget.AutoCompleteTextView"
+
+        android:layout_width="287dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:focusableInTouchMode="true"
+        android:fontFamily="sans-serif"
+        android:hint="Password"
+        android:inputType="textPersonName"
+        android:maxLength="6"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterIDFieldContainer" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

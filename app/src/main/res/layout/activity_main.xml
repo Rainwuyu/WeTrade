@@ -91,23 +91,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextText" />
 
+
     <ImageView
         android:id="@+id/home"
         android:layout_width="30dp"
         android:layout_height="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="@+id/editTextText"
-        app:layout_constraintVertical_bias="0.944"
+        app:layout_constraintVertical_bias="0.936"
         app:layout_marginStart="30dp"
         app:srcCompat="@drawable/home"
-        tools:layout_editor_absoluteX="24dp" />
-
+        tools:layout_editor_absoluteX="61dp" />
 
     <ImageView
         android:id="@+id/star"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="56dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="44dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/home"
         app:layout_constraintTop_toTopOf="@+id/editTextText"
@@ -117,14 +117,28 @@
 
     <ImageView
         android:id="@+id/humanIcon"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="48dp"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="60dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/star"
         app:layout_constraintTop_toTopOf="@+id/editTextText"
+        app:layout_constraintVertical_bias="0.936"
+        app:layout_marginStart="70dp"
+        app:srcCompat="@drawable/humanicon" />
+
+    <ImageView
+        android:id="@+id/accountSettings"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="72dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/humanIcon"
+        app:layout_constraintTop_toTopOf="@+id/editTextText"
         app:layout_constraintVertical_bias="0.944"
         app:layout_marginStart="70dp"
-        app:srcCompat="@drawable/humanicon"/>
+        app:srcCompat="@drawable/account_settings" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

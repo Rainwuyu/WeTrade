@@ -192,11 +192,13 @@
         android:id="@+id/accountSettings"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginStart="36dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/humanIcon"
+        app:layout_constraintTop_toTopOf="@+id/editTextText"
+        app:layout_constraintVertical_bias="0.936"
         app:layout_marginStart="30dp"
-        app:srcCompat="@drawable/account_settings"
-        tools:layout_editor_absoluteY="669dp" />
+        app:srcCompat="@drawable/account_settings" />
 
     <TextView
         android:id="@+id/settingsLabel"

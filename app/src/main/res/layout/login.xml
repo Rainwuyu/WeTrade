@@ -38,8 +38,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="401dp"
         android:layout_height="97dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginStart="56dp"
         app:boxStrokeColor="#f4eb49"
         app:counterEnabled="true"
         app:counterMaxLength="6"
@@ -47,7 +46,7 @@
         app:helperText="Please input your login ID"
         app:helperTextEnabled="true"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2">
+        tools:layout_editor_absoluteY="244dp">
 
 
         <EditText
@@ -56,7 +55,8 @@
 
             android:layout_width="287dp"
             android:layout_height="55dp"
-            android:layout_marginStart="4dp"
+
+            android:layout_marginStart="20dp"
             android:layout_marginTop="76dp"
             android:ems="10"
             android:focusableInTouchMode="true"
@@ -72,8 +72,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="394dp"
         android:layout_height="91dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="56dp"
         app:boxStrokeColor="#f4eb49"
         app:counterEnabled="true"
         app:counterMaxLength="6"
@@ -81,7 +80,7 @@
         app:helperText="Please input your password"
         app:helperTextEnabled="true"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enterIDFieldContainer">
+        tools:layout_editor_absoluteY="367dp">
 
 
         <EditText
@@ -90,7 +89,7 @@
 
             android:layout_width="287dp"
             android:layout_height="51dp"
-            android:layout_marginStart="4dp"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="76dp"
             android:ems="10"
             android:focusableInTouchMode="true"

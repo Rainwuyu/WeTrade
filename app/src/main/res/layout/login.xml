@@ -37,8 +37,9 @@
         android:id="@+id/enterIDFieldContainer"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="401dp"
-        android:layout_height="63dp"
-        android:layout_marginTop="40dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="60dp"
         app:boxStrokeColor="#f4eb49"
         app:counterEnabled="true"
         app:counterMaxLength="6"
@@ -54,7 +55,7 @@
             style="@android:style/Widget.AutoCompleteTextView"
 
             android:layout_width="287dp"
-            android:layout_height="58dp"
+            android:layout_height="55dp"
             android:layout_marginStart="4dp"
             android:layout_marginTop="76dp"
             android:ems="10"
@@ -69,9 +70,10 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/enterPswdFieldContainer"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="401dp"
-        android:layout_height="63dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="394dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="36dp"
         app:boxStrokeColor="#f4eb49"
         app:counterEnabled="true"
         app:counterMaxLength="6"
@@ -82,25 +84,22 @@
         app:layout_constraintTop_toBottomOf="@+id/enterIDFieldContainer">
 
 
+        <EditText
+            android:id="@+id/enterPswdField"
+            style="@android:style/Widget.AutoCompleteTextView"
+
+            android:layout_width="287dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="76dp"
+            android:ems="10"
+            android:focusableInTouchMode="true"
+            android:fontFamily="sans-serif"
+            android:hint="Password"
+            android:inputType="textPersonName"
+            android:maxLength="6"
+            android:textSize="24sp" />
     </com.google.android.material.textfield.TextInputLayout>
-
-    <EditText
-        android:id="@+id/enterPswdField"
-        style="@android:style/Widget.AutoCompleteTextView"
-
-        android:layout_width="287dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="40dp"
-        android:ems="10"
-        android:focusableInTouchMode="true"
-        android:fontFamily="sans-serif"
-        android:hint="Password"
-        android:inputType="textPersonName"
-        android:maxLength="6"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enterIDFieldContainer" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

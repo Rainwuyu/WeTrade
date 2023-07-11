@@ -98,10 +98,10 @@
         android:layout_height="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="@+id/editTextText"
-        app:layout_constraintVertical_bias="0.936"
+        app:layout_constraintVertical_bias="0.944"
         app:layout_marginStart="30dp"
         app:srcCompat="@drawable/home"
-        tools:layout_editor_absoluteX="61dp" />
+        tools:layout_editor_absoluteX="40dp" />
 
     <ImageView
         android:id="@+id/star"
@@ -112,19 +112,32 @@
         app:layout_constraintStart_toEndOf="@+id/home"
         app:layout_constraintTop_toTopOf="@+id/editTextText"
         app:layout_constraintVertical_bias="0.944"
-        app:layout_marginStart="70dp"
+        app:layout_marginStart="30dp"
         app:srcCompat="@drawable/star_icon" />
+
+
+    <ImageView
+        android:id="@+id/add"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/star"
+        app:layout_constraintTop_toTopOf="@+id/editTextText"
+        app:layout_constraintVertical_bias="0.944"
+        app:layout_marginStart="30dp"
+        app:srcCompat="@drawable/add_create_new_plus_icon" />
 
     <ImageView
         android:id="@+id/humanIcon"
         android:layout_width="25dp"
         android:layout_height="25dp"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/star"
+        app:layout_constraintStart_toEndOf="@+id/add"
         app:layout_constraintTop_toTopOf="@+id/editTextText"
         app:layout_constraintVertical_bias="0.936"
-        app:layout_marginStart="70dp"
+        app:layout_marginStart="30dp"
         app:srcCompat="@drawable/humanicon" />
 
     <ImageView
@@ -138,7 +151,7 @@
         app:layout_constraintStart_toEndOf="@+id/humanIcon"
         app:layout_constraintTop_toTopOf="@+id/editTextText"
         app:layout_constraintVertical_bias="0.944"
-        app:layout_marginStart="70dp"
+        app:layout_marginStart="30dp"
         app:srcCompat="@drawable/account_settings" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

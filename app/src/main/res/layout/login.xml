@@ -101,5 +101,17 @@
             android:textSize="24sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <TextView
+        android:id="@+id/WeTradeCopyright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(C) WeTrade 2023"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterPswdFieldContainer"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

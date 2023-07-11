@@ -50,13 +50,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
+
+    <ImageView
+        android:id="@+id/ad"
+        android:layout_width="400dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.043"
+        app:srcCompat="@drawable/doubleeleven" />
+
     <EditText
         android:id="@+id/editTextText"
-        android:layout_width="0dp"
+        android:layout_width="379dp"
         android:layout_height="45dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
         android:background="@drawable/search_bg"
         android:drawableStart="@android:drawable/ic_menu_search"
         android:drawablePadding="8dp"
@@ -65,10 +75,8 @@
         android:paddingStart="8dp"
         android:text="Search"
         android:textColor="#979797"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.352"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="231dp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="380dp"

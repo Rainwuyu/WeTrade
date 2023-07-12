@@ -53,12 +53,15 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <!-- Posts Value -->
+
+    <!--  Round Score Value -->
+
     <TextView
         android:id="@+id/postsVal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="196dp"
-        android:layout_marginEnd="68dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="50dp"
         android:gravity="end"
         android:text="0"
         android:textColor="#000000"
@@ -66,28 +69,27 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/postsLabel" />
 
-    <!--  Round Score Value -->
+    <!-- Posts Label-->
     <TextView
         android:id="@+id/roundScoreVal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="188dp"
+        android:layout_marginTop="8dp"
         android:gravity="center"
         android:text="0"
         android:textColor="#000000"
         android:textSize="40sp"
-        app:layout_constraintEnd_toStartOf="@+id/followingVal"
-        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintEnd_toStartOf="@+id/postsVal"
+        app:layout_constraintHorizontal_bias="0.534"
         app:layout_constraintStart_toEndOf="@+id/roundVal"
-        app:layout_constraintTop_toBottomOf="@+id/roundScoreLabel" />
+        app:layout_constraintTop_toBottomOf="@+id/followersLabel" />
 
     <TextView
         android:id="@+id/roundVal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="188dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="8dp"
         android:gravity="start"
         android:text="0"
         android:textColor="#000000"
@@ -95,61 +97,62 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/roundLabel" />
 
-    <!-- Posts Label-->
     <TextView
         android:id="@+id/postsLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
         android:gravity="end"
         android:text="Posts"
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/followersLabel"
         app:layout_constraintTop_toBottomOf="@+id/showLoginID" />
 
     <!-- Followers Label-->
+
+
     <TextView
         android:id="@+id/followersLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="8dp"
         android:gravity="center"
         android:text="Followers"
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/postsLabel"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/roundLabel"
-        app:layout_constraintTop_toBottomOf="@+id/playerName" />
-
+        app:layout_constraintTop_toBottomOf="@+id/showLoginID" />
 
     <TextView
         android:id="@+id/showLoginID"
-        android:layout_width="122dp"
-        android:layout_height="51dp"
-        android:fontFamily="@font/alfa_slab_one"
+        android:layout_width="95dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/open_sans_semibold"
         android:text="Name"
         android:textColor="#000000"
         android:textSize="30dp"
-        tools:layout_editor_absoluteX="144dp"
-        tools:layout_editor_absoluteY="109dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.543"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/roundLabel"
-        android:layout_width="150dp"
+        android:layout_width="69dp"
         android:layout_height="27dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
         android:gravity="start"
         android:text="Round"
         android:textColor="#000000"
         android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/roundScoreLabel"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/playerName" />
+        app:layout_constraintTop_toBottomOf="@+id/showLoginID" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

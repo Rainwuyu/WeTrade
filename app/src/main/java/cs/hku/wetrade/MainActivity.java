@@ -1,18 +1,38 @@
 package cs.hku.wetrade;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.os.Bundle;
 import android.view.MotionEvent;
+import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-
+    EditText name;  //用户名
+    EditText pass;  //密码
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
+
+        name=(EditText)findViewById(R.id.enterIDField);  // get username
+        pass=(EditText)findViewById(R.id.enterPswdField);  // get password
+    }
+
+    // Login verification
+    public void Check(View v) {
+        String mname = "1234";
+        String mpass = "1234";
+        String user = name.getText().toString().trim();
+        String pwd = pass.getText().toString().trim();
+        if (user.equals(mname) && pwd.equals(mpass)) {
+            Toast.makeText(this, "Welcome!", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "Sorry, wrong password!", Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override
@@ -26,4 +46,5 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onTouchEvent(event);
     }
+
 }

@@ -1,18 +1,21 @@
 package cs.hku.wetrade;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
     EditText name;  //用户名
     EditText pass;  //密码
+    Button Login;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,12 +27,14 @@ public class MainActivity extends AppCompatActivity {
 
     // Login verification
     public void Check(View v) {
-        String mname = "1234";
-        String mpass = "1234";
+        String mname = "2222";
+        String mpass = "2222";
         String user = name.getText().toString().trim();
         String pwd = pass.getText().toString().trim();
         if (user.equals(mname) && pwd.equals(mpass)) {
             Toast.makeText(this, "Welcome!", Toast.LENGTH_SHORT).show();
+            Intent intent=new Intent(MainActivity.this, NextActivity.class);
+            startActivity(intent);
         } else {
             Toast.makeText(this, "Sorry, wrong password!", Toast.LENGTH_SHORT).show();
         }

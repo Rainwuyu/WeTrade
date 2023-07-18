@@ -1,13 +1,14 @@
 package cs.hku.wetrade;
 
-import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class NextActivity extends AppCompatActivity {
+import android.os.Bundle;
+
+public class MeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.home);
+        setContentView(R.layout.me);
     }
 }

@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         String pwd = pass.getText().toString().trim();
         if (user.equals(mname) && pwd.equals(mpass)) {
             Toast.makeText(this, "Welcome!", Toast.LENGTH_SHORT).show();
-            Intent intent=new Intent(MainActivity.this, NextActivity.class);
+            Intent intent=new Intent(MainActivity.this, HomeActivity.class);
             startActivity(intent);
         } else {
             Toast.makeText(this, "Sorry, wrong password!", Toast.LENGTH_SHORT).show();

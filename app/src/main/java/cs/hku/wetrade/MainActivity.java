@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     // Login verification
     public void Check(View v) {
-        String mname = "2222";
+        String mname = "hku";
         String mpass = "2222";
         String user = name.getText().toString().trim();
         String pwd = pass.getText().toString().trim();

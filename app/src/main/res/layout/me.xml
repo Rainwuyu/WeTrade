@@ -128,7 +128,7 @@
     <!--Show Login ID-->
     <TextView
         android:id="@+id/showLoginID"
-        android:layout_width="95dp"
+        android:layout_width="150dp"
         android:layout_height="46dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="100dp"

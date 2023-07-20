@@ -83,9 +83,6 @@
         app:layout_constraintTop_toBottomOf="@+id/followersLabel" />
 
     <!--Following Value-->
-
-    <!--Posts Label-->
-
     <TextView
         android:id="@+id/followingVal"
         android:layout_width="wrap_content"
@@ -98,7 +95,7 @@
         android:textSize="40sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/followingLabel" />
-
+    <!--Posts Label-->
     <TextView
         android:id="@+id/postsLabel"
         android:layout_width="wrap_content"
@@ -160,12 +157,14 @@
 
 
     <!--Revenue Label-->
+
+
     <TextView
         android:id="@+id/revenueLabel"
         android:layout_width="100dp"
         android:layout_height="27dp"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="272dp"
+        android:layout_marginTop="256dp"
         android:gravity="start"
         android:text="Revenue"
         android:textColor="#000000"
@@ -188,42 +187,96 @@
         app:layout_constraintTop_toBottomOf="@+id/revenueLabel" />
 
     <!--Expenses Label-->
+
     <TextView
         android:id="@+id/expensesLabel"
         android:layout_width="100dp"
         android:layout_height="27dp"
         android:layout_marginStart="108dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="20dp"
         android:gravity="start"
         android:text="Expenses"
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/revenueLabel"
         app:layout_constraintTop_toBottomOf="@+id/postsVal" />
+
 
     <!--Expenses Value-->
     <TextView
         android:id="@+id/expensesVal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="68dp"
         android:gravity="start"
         android:text="$0"
         android:textColor="#000000"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.979"
+        app:layout_constraintHorizontal_bias="0.857"
         app:layout_constraintStart_toEndOf="@+id/revenueVal"
         app:layout_constraintTop_toBottomOf="@+id/expensesLabel" />
 
     <!--Bank Account Label-->
+    <TextView
+        android:id="@+id/bankAccountLabel"
+        android:layout_width="376dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="28dp"
+        android:gravity="start"
+        android:text="Bank Account (For Receiving Money)"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.685"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/revenueVal" />
 
     <!--Bank Account Value-->
 
+    <!--Credit Card Label-->
 
-    <!--
+    <TextView
+        android:id="@+id/bankAccountVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="start"
+        android:text="HK-HSBC-0000000000000000"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        app:layout_constraintTop_toBottomOf="@+id/bankAccountLabel"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/creditCardLabel"
+        android:layout_width="376dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="4dp"
+        android:gravity="start"
+        android:text="Credit Card (For Payments)"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bankAccountVal" />
+
+
+    <!-- Credit Card Value-->
+    <TextView
+        android:id="@+id/creditCardValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="start"
+        android:text="Visa-0000-0000-0000-0000"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        app:layout_constraintTop_toBottomOf="@+id/creditCardLabel"
+        tools:layout_editor_absoluteX="0dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

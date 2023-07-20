@@ -54,8 +54,6 @@
 
     <!-- Posts Value -->
 
-    <!--  Round Score Value -->
-
     <TextView
         android:id="@+id/postsVal"
         android:layout_width="wrap_content"
@@ -69,9 +67,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/postsLabel" />
 
-    <!-- Posts Label-->
+    <!-- Followers Value-->
     <TextView
-        android:id="@+id/roundScoreVal"
+        android:id="@+id/followersVal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -81,11 +79,12 @@
         android:textSize="40sp"
         app:layout_constraintEnd_toStartOf="@+id/postsVal"
         app:layout_constraintHorizontal_bias="0.534"
-        app:layout_constraintStart_toEndOf="@+id/roundVal"
+        app:layout_constraintStart_toEndOf="@+id/followingVal"
         app:layout_constraintTop_toBottomOf="@+id/followersLabel" />
 
+    <!--Following Value-->
     <TextView
-        android:id="@+id/roundVal"
+        android:id="@+id/followingVal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
@@ -97,6 +96,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/roundLabel" />
 
+    <!--Posts Label-->
     <TextView
         android:id="@+id/postsLabel"
         android:layout_width="wrap_content"
@@ -112,7 +112,6 @@
 
     <!-- Followers Label-->
 
-
     <TextView
         android:id="@+id/followersLabel"
         android:layout_width="wrap_content"
@@ -126,6 +125,7 @@
         app:layout_constraintStart_toEndOf="@+id/roundLabel"
         app:layout_constraintTop_toBottomOf="@+id/showLoginID" />
 
+    <!--Show Login ID-->
     <TextView
         android:id="@+id/showLoginID"
         android:layout_width="95dp"
@@ -134,7 +134,7 @@
         android:layout_marginTop="100dp"
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/open_sans_semibold"
-        android:text="Name"
+        android:text="LoginID"
         android:textColor="#000000"
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -142,14 +142,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!--Following Label-->
     <TextView
-        android:id="@+id/roundLabel"
+        android:id="@+id/followingLabel"
         android:layout_width="69dp"
         android:layout_height="27dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:gravity="start"
-        android:text="Round"
+        android:text="Following"
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"

@@ -83,11 +83,14 @@
         app:layout_constraintTop_toBottomOf="@+id/followersLabel" />
 
     <!--Following Value-->
+
+    <!--Posts Label-->
+
     <TextView
         android:id="@+id/followingVal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="72dp"
         android:layout_marginTop="8dp"
         android:gravity="start"
         android:text="0"
@@ -96,7 +99,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/followingLabel" />
 
-    <!--Posts Label-->
     <TextView
         android:id="@+id/postsLabel"
         android:layout_width="wrap_content"
@@ -155,5 +157,73 @@
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/showLoginID" />
+
+
+    <!--Revenue Label-->
+    <TextView
+        android:id="@+id/revenueLabel"
+        android:layout_width="100dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="272dp"
+        android:gravity="start"
+        android:text="Revenue"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--Revenue Value-->
+    <TextView
+        android:id="@+id/revenueVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="16dp"
+        android:gravity="start"
+        android:text="$0"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/revenueLabel" />
+
+    <!--Expenses Label-->
+    <TextView
+        android:id="@+id/expensesLabel"
+        android:layout_width="100dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="28dp"
+        android:gravity="start"
+        android:text="Expenses"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintStart_toEndOf="@+id/revenueLabel"
+        app:layout_constraintTop_toBottomOf="@+id/postsVal" />
+
+    <!--Expenses Value-->
+    <TextView
+        android:id="@+id/expensesVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="68dp"
+        android:gravity="start"
+        android:text="$0"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.979"
+        app:layout_constraintStart_toEndOf="@+id/revenueVal"
+        app:layout_constraintTop_toBottomOf="@+id/expensesLabel" />
+
+    <!--Bank Account Label-->
+
+    <!--Bank Account Value-->
+
+
+    <!--
 
 </androidx.constraintlayout.widget.ConstraintLayout>

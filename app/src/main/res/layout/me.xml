@@ -94,7 +94,7 @@
         android:textColor="#000000"
         android:textSize="40sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/roundLabel" />
+        app:layout_constraintTop_toBottomOf="@+id/followingLabel" />
 
     <!--Posts Label-->
     <TextView
@@ -122,7 +122,7 @@
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/postsLabel"
-        app:layout_constraintStart_toEndOf="@+id/roundLabel"
+        app:layout_constraintStart_toEndOf="@+id/followingLabel"
         app:layout_constraintTop_toBottomOf="@+id/showLoginID" />
 
     <!--Show Login ID-->
@@ -145,7 +145,7 @@
     <!--Following Label-->
     <TextView
         android:id="@+id/followingLabel"
-        android:layout_width="69dp"
+        android:layout_width="100dp"
         android:layout_height="27dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"

@@ -16,13 +16,23 @@ public class MainActivity extends AppCompatActivity {
     EditText name;  //用户名
     EditText pass;  //密码
     Button Login;
+    Button Register;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
-        name=(EditText)findViewById(R.id.enterIDField);  // get username
-        pass=(EditText)findViewById(R.id.enterPswdField);  // get password
+        name = (EditText) findViewById(R.id.enterIDField);  // get username
+        pass = (EditText) findViewById(R.id.enterPswdField);  // get password
+        Register =(Button) findViewById(R.id.register);
+        Register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity.this, RegisterActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     // Login verification
@@ -33,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         String pwd = pass.getText().toString().trim();
         if (user.equals(mname) && pwd.equals(mpass)) {
             Toast.makeText(this, "Welcome!", Toast.LENGTH_SHORT).show();
-            Intent intent=new Intent(MainActivity.this, HomeActivity.class);
+            Intent intent = new Intent(MainActivity.this, HomeActivity.class);
             startActivity(intent);
         } else {
             Toast.makeText(this, "Sorry, wrong password!", Toast.LENGTH_SHORT).show();

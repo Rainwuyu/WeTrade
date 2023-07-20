@@ -243,13 +243,14 @@
         android:id="@+id/bankAccountVal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:gravity="start"
         android:text="HK-HSBC-0000000000000000"
         android:textColor="#000000"
-        android:textSize="40sp"
-        app:layout_constraintTop_toBottomOf="@+id/bankAccountLabel"
-        tools:layout_editor_absoluteX="0dp" />
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bankAccountLabel" />
 
     <TextView
         android:id="@+id/creditCardLabel"
@@ -268,15 +269,47 @@
 
     <!-- Credit Card Value-->
     <TextView
-        android:id="@+id/creditCardValue"
+        android:id="@+id/creditCardVal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:gravity="start"
         android:text="Visa-0000-0000-0000-0000"
         android:textColor="#000000"
-        android:textSize="40sp"
-        app:layout_constraintTop_toBottomOf="@+id/creditCardLabel"
-        tools:layout_editor_absoluteX="0dp" />
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/creditCardLabel" />
+
+
+    <!--Delivery Address Label-->
+    <TextView
+        android:id="@+id/deliveryAddressLabel"
+        android:layout_width="376dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="12dp"
+        android:gravity="start"
+        android:text="Delivery Address"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/creditCardVal" />
+
+
+    <!--Delivery Address Value-->
+    <TextView
+        android:id="@+id/deliveryAddressVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="start"
+        android:text="The University of Hong Kong, Pokfulam, Hong Kong"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deliveryAddressLabel" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

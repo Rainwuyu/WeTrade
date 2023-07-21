@@ -17,6 +17,14 @@ public class UserDB extends SQLiteOpenHelper {
     private static final String COLUMN_ID = "_id";
     private static final String COLUMN_USERNAME = "username";
     private static final String COLUMN_PASSWORD = "password";
+    private static final String COLUMN_FOLLOWING = "following";
+    private static final String COLUMN_FOLLOWERS = "followers";
+    private static final String COLUMN_POSTS = "posts";
+    private static final String COLUMN_REVENUE = "revenue";
+    private static final String COLUMN_EXPENSE = "expense";
+    private static final String COLUMN_ACCOUNT = "account";
+    private static final String COLUMN_CREDIT = "credit";
+    private static final String COLUMN_ADDRESS = "address";
 
     public UserDB(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -28,7 +36,15 @@ public class UserDB extends SQLiteOpenHelper {
         String createTableQuery = "CREATE TABLE " + TABLE_NAME + "(" +
                 COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 COLUMN_USERNAME + " TEXT, " +
-                COLUMN_PASSWORD + " TEXT)";
+                COLUMN_PASSWORD + " TEXT, " +
+                COLUMN_FOLLOWING + " TEXT, " +
+                COLUMN_FOLLOWERS + " TEXT, " +
+                COLUMN_POSTS + " TEXT, " +
+                COLUMN_REVENUE + " TEXT, " +
+                COLUMN_EXPENSE + " TEXT, " +
+                COLUMN_ACCOUNT + " TEXT, " +
+                COLUMN_CREDIT + " TEXT, " +
+                COLUMN_ADDRESS + " TEXT )";
         db.execSQL(createTableQuery);
     }
 
@@ -61,10 +77,10 @@ public class UserDB extends SQLiteOpenHelper {
     }
 
     // Update data
-    public void updateData(int id, String newTitle) {
+    public void updateData(int id, String newUsername) {
         SQLiteDatabase db = getWritableDatabase();
         String updateQuery = "UPDATE " + TABLE_NAME + " SET " +
-                COLUMN_USERNAME + " = '" + newTitle + "' WHERE " +
+                COLUMN_USERNAME + " = '" + newUsername + "' WHERE " +
                 COLUMN_ID + " = " + id;
         db.execSQL(updateQuery);
         db.close();

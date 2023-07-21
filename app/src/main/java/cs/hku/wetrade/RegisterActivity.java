@@ -37,8 +37,8 @@ public class RegisterActivity extends AppCompatActivity {
         String user = name.getText().toString().trim();
         String pwd = pass.getText().toString().trim();
 
-        UserDB dbHelper = new UserDB(RegisterActivity.this);
-        SQLiteDatabase db = dbHelper.getWritableDatabase(); // Gets a writable database instance
+        UserDB userDBHelper = new UserDB(RegisterActivity.this);
+        SQLiteDatabase db = userDBHelper.getWritableDatabase(); // Gets a writable database instance
 
         String selectQuery = "SELECT username FROM userTable";
         Cursor cursor = db.rawQuery(selectQuery, null);
@@ -60,8 +60,7 @@ public class RegisterActivity extends AppCompatActivity {
         }
         else if (!exists) {
             // insert new user data into database
-            String insertQuery = "INSERT INTO userTable (username, password) VALUES ('" + user + "', '" + pwd + "')";
-            db.execSQL(insertQuery);
+            userDBHelper.insertData(user, pwd);
             Toast.makeText(this, "Successful registration!", Toast.LENGTH_SHORT).show();
             // wait for 1 second
             try {

@@ -37,11 +37,11 @@ public class UserDB extends SQLiteOpenHelper {
                 COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 COLUMN_USERNAME + " TEXT, " +
                 COLUMN_PASSWORD + " TEXT, " +
-                COLUMN_FOLLOWING + " TEXT, " +
-                COLUMN_FOLLOWERS + " TEXT, " +
-                COLUMN_POSTS + " TEXT, " +
-                COLUMN_REVENUE + " TEXT, " +
-                COLUMN_EXPENSE + " TEXT, " +
+                COLUMN_FOLLOWING + " INTEGER, " +
+                COLUMN_FOLLOWERS + " INTEGER, " +
+                COLUMN_POSTS + " INTEGER, " +
+                COLUMN_REVENUE + " FLOAT, " +
+                COLUMN_EXPENSE + " FLOAT, " +
                 COLUMN_ACCOUNT + " TEXT, " +
                 COLUMN_CREDIT + " TEXT, " +
                 COLUMN_ADDRESS + " TEXT )";

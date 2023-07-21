@@ -15,6 +15,8 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.concurrent.TimeUnit;
+
 public class MainActivity extends AppCompatActivity {
     EditText name;  //用户名
     EditText pass;  //密码
@@ -40,36 +42,49 @@ public class MainActivity extends AppCompatActivity {
 
     // Login verification
     public void Check(View v) {
-        String mname = "hku";
-        String mpass = "666";
         String user = name.getText().toString().trim();
         String pwd = pass.getText().toString().trim();
 
         UserDB dbHelper = new UserDB(MainActivity.this);
         SQLiteDatabase db = dbHelper.getWritableDatabase(); // Gets a writable database instance
 
-        String selectUsername = "SELECT * FROM userTable";
-        Cursor cursor = db.rawQuery(selectUsername, null);
-        if (cursor != null && cursor.moveToFirst()) {
+        String selectUsername = "SELECT username FROM userTable";
+        Cursor cursor1 = db.rawQuery(selectUsername, null);
+        if (cursor1 != null && cursor1.moveToFirst()) {
             do {
-                @SuppressLint("Range") String username = cursor.getString(cursor.getColumnIndex("username"));
+                @SuppressLint("Range") String username = cursor1.getString(cursor1.getColumnIndex("username"));
                 if (username.equals(user)) {
                     // If the username already exist
                     break;
                 }
                 // Process data
-            } while (cursor.moveToNext());
+            } while (cursor1.moveToNext());
         }
-        boolean exists = !cursor.isAfterLast();
-        cursor.close();
-        String selectPassword = "SELECT * WHERE username = 'user' FROM userTable";
+        boolean exists = !cursor1.isAfterLast();
+        cursor1.close();
 
-        if (user.equals(mname) && pwd.equals(mpass)) {
-            Toast.makeText(this, "Welcome!", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(MainActivity.this, HomeActivity.class);
-            startActivity(intent);
-        } else {
-            Toast.makeText(this, "Sorry, wrong password!", Toast.LENGTH_SHORT).show();
+        if (user.equals("") || pwd.equals("")) {
+            Toast.makeText(this, "The username or password cannot be null!", Toast.LENGTH_SHORT).show();
+        }
+        else if (exists) {
+            String selectPassword = "SELECT password FROM userTable WHERE username = '"+user+"'";
+            Cursor cursor2 = db.rawQuery(selectPassword, null);
+            if (cursor2 != null && cursor2.moveToFirst()) {
+                do {
+                    @SuppressLint("Range") String password = cursor2.getString(cursor2.getColumnIndex("password"));
+                    if (password.equals(pwd)) {
+                        // If the password is correct
+                        Toast.makeText(this, "Welcome!", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                        startActivity(intent);
+                        break;
+                    } else {
+                        Toast.makeText(this, "Sorry, wrong password!", Toast.LENGTH_SHORT).show();
+                    }
+                    // Process data
+                } while (cursor2.moveToNext());
+            }
+            cursor2.close();
         }
     }
 

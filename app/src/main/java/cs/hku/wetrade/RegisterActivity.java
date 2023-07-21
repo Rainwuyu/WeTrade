@@ -40,7 +40,7 @@ public class RegisterActivity extends AppCompatActivity {
         UserDB dbHelper = new UserDB(RegisterActivity.this);
         SQLiteDatabase db = dbHelper.getWritableDatabase(); // Gets a writable database instance
 
-        String selectQuery = "SELECT * FROM userTable";
+        String selectQuery = "SELECT username FROM userTable";
         Cursor cursor = db.rawQuery(selectQuery, null);
         if (cursor != null && cursor.moveToFirst()) {
             do {
@@ -56,7 +56,7 @@ public class RegisterActivity extends AppCompatActivity {
         cursor.close();
 
         if (user.equals("") || pwd.equals("")) {
-            Toast.makeText(this, "The username of password cannot be null!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "The username or password cannot be null!", Toast.LENGTH_SHORT).show();
         }
         else if (!exists) {
             // insert new user data into database

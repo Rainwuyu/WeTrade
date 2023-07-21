@@ -1,7 +1,10 @@
 package cs.hku.wetrade;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
@@ -41,6 +44,26 @@ public class MainActivity extends AppCompatActivity {
         String mpass = "666";
         String user = name.getText().toString().trim();
         String pwd = pass.getText().toString().trim();
+
+        UserDB dbHelper = new UserDB(MainActivity.this);
+        SQLiteDatabase db = dbHelper.getWritableDatabase(); // Gets a writable database instance
+
+        String selectUsername = "SELECT * FROM userTable";
+        Cursor cursor = db.rawQuery(selectUsername, null);
+        if (cursor != null && cursor.moveToFirst()) {
+            do {
+                @SuppressLint("Range") String username = cursor.getString(cursor.getColumnIndex("username"));
+                if (username.equals(user)) {
+                    // If the username already exist
+                    break;
+                }
+                // Process data
+            } while (cursor.moveToNext());
+        }
+        boolean exists = !cursor.isAfterLast();
+        cursor.close();
+        String selectPassword = "SELECT * WHERE username = 'user' FROM userTable";
+
         if (user.equals(mname) && pwd.equals(mpass)) {
             Toast.makeText(this, "Welcome!", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(MainActivity.this, HomeActivity.class);

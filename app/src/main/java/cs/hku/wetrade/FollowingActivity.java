@@ -60,5 +60,13 @@ public class FollowingActivity extends AppCompatActivity {
 //            }
 //        });
 
+        setting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(FollowingActivity.this, settingsActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }

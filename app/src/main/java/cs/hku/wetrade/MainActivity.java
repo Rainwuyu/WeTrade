@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         if (user.equals("") || pwd.equals("")) {
             Toast.makeText(this, "The username or password cannot be null!", Toast.LENGTH_SHORT).show();
         }
-        if (user.equals("hku") || pwd.equals("666")) {
+        if (user.equals("hku") && pwd.equals("666")) {
             Toast.makeText(this, "Welcome!", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(MainActivity.this, HomeActivity.class);
             startActivity(intent);

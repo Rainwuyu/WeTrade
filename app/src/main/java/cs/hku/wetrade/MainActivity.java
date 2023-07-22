@@ -69,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
         if (user.equals("hku") && pwd.equals("666")) {
             Toast.makeText(this, "Welcome!", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+            MeActivity.uname = "hku";
             startActivity(intent);
         }
         else if (exists) {
@@ -81,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
                         // If the password is correct
                         Toast.makeText(this, "Welcome!", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                        MeActivity.uname = user;
                         startActivity(intent);
                         break;
                     } else {

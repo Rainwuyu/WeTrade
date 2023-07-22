@@ -7,8 +7,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MeActivity extends AppCompatActivity {
+    TextView loginID;
+    public static String uname;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +22,9 @@ public class MeActivity extends AppCompatActivity {
         ImageView upload = findViewById(R.id.add);
         ImageView me = findViewById(R.id.humanIcon);
         ImageView settings = findViewById(R.id.accountSettings);
+        loginID = (TextView) findViewById(R.id.showLoginID);
+
+        loginID.setText(uname);
 
         home.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -12,7 +12,8 @@ public class MeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-       c
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.me);
         ImageView home = findViewById(R.id.home);
         ImageView following = findViewById(R.id.star);
         ImageView upload = findViewById(R.id.add);

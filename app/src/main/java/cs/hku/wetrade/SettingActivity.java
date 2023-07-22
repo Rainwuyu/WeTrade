@@ -1,8 +1,13 @@
 package cs.hku.wetrade;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.CompoundButton;
+import android.widget.Switch;
+import android.widget.TextView;
 
 public class SettingActivity extends AppCompatActivity {
 
@@ -11,5 +16,12 @@ public class SettingActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings);
+
+
+
+
     }
+
+
+
 }

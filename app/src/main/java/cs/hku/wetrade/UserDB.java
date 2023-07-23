@@ -11,10 +11,10 @@ public class UserDB extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 1;
 
     // Table name
-    private static final String TABLE_NAME = "userTable";
+    public static final String USER_TABLE_NAME = "userTable";
 
     // Column name
-    private static final String COLUMN_ID = "_id";
+    public static final String COLUMN_UID = "_uid";
     private static final String COLUMN_USERNAME = "username";
     private static final String COLUMN_PASSWORD = "password";
     private static final String COLUMN_FOLLOWING = "following";
@@ -33,9 +33,9 @@ public class UserDB extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         // Create database table
-        String createTableQuery = "CREATE TABLE " + TABLE_NAME + "(" +
-                COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                COLUMN_USERNAME + " TEXT, " +
+        String createTableQuery = "CREATE TABLE " + USER_TABLE_NAME + "(" +
+                COLUMN_UID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                COLUMN_USERNAME + " TEXT UNIQUE, " +
                 COLUMN_PASSWORD + " TEXT, " +
                 COLUMN_FOLLOWING + " INTEGER, " +
                 COLUMN_FOLLOWERS + " INTEGER, " +
@@ -59,7 +59,7 @@ public class UserDB extends SQLiteOpenHelper {
     // Insert data
     public void insertData(String username, String password) {
         SQLiteDatabase db = getWritableDatabase();
-        String insertQuery = "INSERT INTO " + TABLE_NAME + " (" +
+        String insertQuery = "INSERT INTO " + USER_TABLE_NAME + " (" +
                 COLUMN_USERNAME + ", " +
                 COLUMN_PASSWORD + ") VALUES ('" +
                 username + "', '" +
@@ -71,26 +71,26 @@ public class UserDB extends SQLiteOpenHelper {
     // Query all data
     public Cursor getAllData() {
         SQLiteDatabase db = getReadableDatabase();
-        String selectQuery = "SELECT * FROM " + TABLE_NAME;
+        String selectQuery = "SELECT * FROM " + USER_TABLE_NAME;
         Cursor cursor = db.rawQuery(selectQuery, null);
         return cursor;
     }
 
     // Update data
-    public void updateData(int id, String newUsername) {
+    public void updateData(int uid, String newUsername) {
         SQLiteDatabase db = getWritableDatabase();
-        String updateQuery = "UPDATE " + TABLE_NAME + " SET " +
+        String updateQuery = "UPDATE " + USER_TABLE_NAME + " SET " +
                 COLUMN_USERNAME + " = '" + newUsername + "' WHERE " +
-                COLUMN_ID + " = " + id;
+                COLUMN_UID + " = " + uid;
         db.execSQL(updateQuery);
         db.close();
     }
 
     // Delete data
-    public void deleteData(int id) {
+    public void deleteData(int uid) {
         SQLiteDatabase db = getWritableDatabase();
-        String deleteQuery = "DELETE FROM " + TABLE_NAME + " WHERE " +
-                COLUMN_ID + " = " + id;
+        String deleteQuery = "DELETE FROM " + USER_TABLE_NAME + " WHERE " +
+                COLUMN_UID + " = " + uid;
         db.execSQL(deleteQuery);
         db.close();
     }

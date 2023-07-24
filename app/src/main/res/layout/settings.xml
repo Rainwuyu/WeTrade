@@ -85,31 +85,34 @@
         app:layout_constraintTop_toBottomOf="@+id/contactUs" />
 
     <!--Settings Label-->
-    <TextView
-        android:id="@+id/settingsLabel"
-        android:layout_width="150dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/open_sans_semibold"
-        android:text="Settings"
-        android:textColor="#000000"
-        android:textSize="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.107"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/serviceHotline" />
 
     <!--Theme Selector Label-->
 
 
     <!--Theme Switch-->
 
+    <!--Update Bank Account-->
+
+    <TextView
+        android:id="@+id/settingsLabel"
+        android:layout_width="150dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:text="Settings"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/serviceHotline" />
+
     <TextView
         android:id="@+id/themeSelectorLabel"
         android:layout_width="199dp"
         android:layout_height="52dp"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="8dp"
         android:gravity="start"
         android:text="Theme (Light/Dark)"
         android:textColor="#000000"
@@ -121,11 +124,185 @@
         android:id="@+id/switchMode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
+        android:layout_marginStart="76dp"
         android:layout_marginTop="64dp"
         android:thumb="@drawable/thumb"
-        app:layout_constraintHorizontal_bias="0.206"
         app:layout_constraintStart_toEndOf="@+id/themeSelectorLabel"
         app:layout_constraintTop_toBottomOf="@+id/serviceHotline"
         app:track="@drawable/track" />
+
+    <TextView
+        android:id="@+id/UpdateBankAccountLabel"
+        android:layout_width="240dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="4dp"
+        android:gravity="start"
+        android:text="Update Bank Account No."
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.163"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/themeSelectorLabel" />
+
+    <EditText
+        android:id="@+id/enterBankAccountNo"
+        android:layout_width="262dp"
+        android:layout_height="52dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:background="#F2F2F2"
+        android:hint="Enter Your Bank Account No."
+        android:padding="15dp"
+        android:textColorHint="#000"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UpdateBankAccountLabel" />
+
+    <!--Update Credit Card No.-->
+
+    <Button
+        android:id="@+id/updateBankAccountButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="84dp"
+        android:background="#000"
+        android:padding="10dp"
+        android:text="Update"
+        android:textColor="#0f0"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintStart_toEndOf="@+id/enterBankAccountNo"
+        app:layout_constraintTop_toBottomOf="@+id/switchMode" />
+
+    <TextView
+        android:id="@+id/UpdateCreditCardLabel"
+        android:layout_width="240dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="4dp"
+        android:gravity="start"
+        android:text="Update Credit Card No."
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.163"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterBankAccountNo" />
+
+    <EditText
+        android:id="@+id/enterCreditCardNo"
+        android:layout_width="262dp"
+        android:layout_height="52dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:background="#F2F2F2"
+        android:hint="Enter Your Credit Card No."
+        android:padding="15dp"
+        android:textColorHint="#000"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UpdateCreditCardLabel" />
+
+    <!--Update Delivery Address-->
+
+    <Button
+        android:id="@+id/updateCreditCardButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="68dp"
+        android:background="#000"
+        android:padding="10dp"
+        android:text="Update"
+        android:textColor="#0f0"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toEndOf="@+id/enterCreditCardNo"
+        app:layout_constraintTop_toBottomOf="@+id/updateBankAccountButton" />
+
+    <TextView
+        android:id="@+id/UpdateDeliveryAddressLabel"
+        android:layout_width="240dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="8dp"
+        android:gravity="start"
+        android:text="Update Delivery Address"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.187"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterCreditCardNo" />
+
+    <EditText
+        android:id="@+id/enterDeliveryAddress"
+        android:layout_width="262dp"
+        android:layout_height="52dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:background="#F2F2F2"
+        android:hint="Enter Your Delivery Address."
+        android:padding="15dp"
+        android:textColorHint="#000"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UpdateDeliveryAddressLabel" />
+
+    <!--Logout Button-->
+
+    <Button
+        android:id="@+id/updateDeliveryAddressButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="80dp"
+        android:background="#000"
+        android:padding="10dp"
+        android:text="Update"
+        android:textColor="#0f0"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toEndOf="@+id/enterDeliveryAddress"
+        app:layout_constraintTop_toBottomOf="@+id/updateCreditCardButton" />
+
+    <Button
+        android:id="@+id/Logout"
+        android:layout_width="200dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:onClick="Check"
+        android:text="Logout"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/serviceHotline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/contactUs"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.776" />
+
+
+    <ImageView
+        android:id="@+id/home"
+
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/Logout"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.083"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.233"
+        app:srcCompat="@drawable/home" />
 </androidx.constraintlayout.widget.ConstraintLayout>

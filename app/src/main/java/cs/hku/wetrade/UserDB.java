@@ -17,6 +17,7 @@ public class UserDB extends SQLiteOpenHelper {
     public static final String COLUMN_UID = "_uid";
     private static final String COLUMN_USERNAME = "username";
     private static final String COLUMN_PASSWORD = "password";
+    private static final String COLUMN_USERIMAGE = "userimage";
     private static final String COLUMN_FOLLOWING = "following";
     private static final String COLUMN_FOLLOWERS = "followers";
     private static final String COLUMN_POSTS = "posts";
@@ -37,6 +38,7 @@ public class UserDB extends SQLiteOpenHelper {
                 COLUMN_UID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 COLUMN_USERNAME + " TEXT UNIQUE, " +
                 COLUMN_PASSWORD + " TEXT, " +
+                COLUMN_USERIMAGE + " BLOB, " +
                 COLUMN_FOLLOWING + " INTEGER, " +
                 COLUMN_FOLLOWERS + " INTEGER, " +
                 COLUMN_POSTS + " INTEGER, " +

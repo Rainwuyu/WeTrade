@@ -16,6 +16,7 @@ public class ItemDB extends SQLiteOpenHelper {
     // Column name
     public static final String COLUMN_PID = "_pid";
     private static final String COLUMN_ITEMNAME = "itemname";
+    private static final String COLUMN_ITEMIMAGE = "itemimage";
     private static final String COLUMN_CATEGORY = "category";
     private static final String COLUMN_PRICE = "price";
     private static final String COLUMN_STOCK = "stock";
@@ -31,6 +32,7 @@ public class ItemDB extends SQLiteOpenHelper {
         String createTableQuery = "CREATE TABLE " + ITEM_TABLE_NAME + "(" +
                 COLUMN_PID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 COLUMN_ITEMNAME + " TEXT, " +
+                COLUMN_ITEMIMAGE + " BLOB, " +
                 COLUMN_CATEGORY + " TEXT, " +
                 COLUMN_PRICE + " FLOAT, " +
                 COLUMN_STOCK + " INTEGER, " +
@@ -47,15 +49,17 @@ public class ItemDB extends SQLiteOpenHelper {
     }
 
     // Insert data
-    public void insertData(String itemname, String category, float price, int stock, String seller) {
+    public void insertData(String itemname, long itemimage, String category, float price, int stock, String seller) {
         SQLiteDatabase db = getWritableDatabase();
         String insertQuery = "INSERT INTO " + ITEM_TABLE_NAME + " (" +
                 COLUMN_ITEMNAME + ", " +
+                COLUMN_ITEMIMAGE + ", " +
                 COLUMN_CATEGORY + ", " +
                 COLUMN_PRICE + ", " +
                 COLUMN_STOCK + ", " +
                 COLUMN_SELLER + ") VALUES ('" +
                 itemname + "', '" +
+                itemimage + "', '" +
                 category + "', '" +
                 price + "', '" +
                 stock + "', '" +

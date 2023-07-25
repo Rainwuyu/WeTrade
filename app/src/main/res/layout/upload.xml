@@ -16,19 +16,20 @@
         android:text="Category"
         android:textColor="#000000"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/UploadPrice"
+        app:layout_constraintStart_toStartOf="@+id/textView11"
         app:layout_constraintTop_toBottomOf="@+id/UploadPrice" />
+
 
     <Spinner
         android:id="@+id/spinner"
-        android:layout_width="280dp"
-        android:layout_height="50dp"
+        android:layout_width="253dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="4dp"
         android:entries="@array/category"
         android:spinnerMode="dialog"
         app:layout_constraintStart_toStartOf="@+id/price2"
         app:layout_constraintTop_toBottomOf="@+id/price2" />
-
 
     <TextView
         android:id="@+id/textView"
@@ -78,8 +79,8 @@
 
     <Button
         android:id="@+id/UploadPhotosButton"
-        android:layout_width="82dp"
-        android:layout_height="69dp"
+        android:layout_width="93dp"
+        android:layout_height="62dp"
         android:layout_marginStart="128dp"
         android:text="+"
         android:textSize="40sp"
@@ -111,34 +112,14 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <TextView
-        android:id="@+id/price"
-        android:layout_width="71dp"
-        android:layout_height="37dp"
-        android:text="Price"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/adddescription"
-        app:layout_constraintTop_toBottomOf="@+id/adddescription" />
-
-    <TextView
         android:id="@+id/UploadPrice"
         android:layout_width="322dp"
         android:layout_height="40dp"
-        android:text="Upload Price Here"
-
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/price"
-        app:layout_constraintTop_toBottomOf="@+id/price" />
-
-    <TextView
-
-        android:id="@+id/adddescription"
-        android:layout_width="328dp"
-        android:layout_height="50dp"
-        android:text="Add Description Here"
-
-        app:layout_constraintStart_toStartOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        android:layout_marginTop="9dp"
+        android:text="Price                          Upload Price Here"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
     <ImageView
         android:id="@+id/home1"
@@ -164,8 +145,11 @@
         android:id="@+id/star1"
         android:layout_width="50dp"
         android:layout_height="43dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="17dp"
         app:layout_constraintBottom_toTopOf="@+id/starLabel1"
-        app:layout_constraintStart_toEndOf="@+id/price"
+        app:layout_constraintStart_toEndOf="@+id/home1"
+        app:layout_constraintTop_toBottomOf="@+id/spinner"
         app:srcCompat="@drawable/star_icon" />
 
     <TextView
@@ -243,13 +227,88 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="95dp"
+        android:layout_height="59dp"
         android:text="Submit"
         app:layout_constraintBottom_toTopOf="@+id/add1"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.933"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+        app:layout_constraintTop_toBottomOf="@+id/spinner"
+        app:layout_constraintVertical_bias="1.0" />
 
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="110dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Item Name"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="105dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="17dp"
+        android:text="Category"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="146dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="20dp"
+        android:text="Stock Quantity"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="174dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="176dp"
+        android:text="Add description here"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/UploadPhotosButton" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="163dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:text="Add name here"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="161dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="Add category here"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="165dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Add stock quantity information"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

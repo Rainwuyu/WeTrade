@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="category">
+        <item>Baby Clothing &amp; Accessories</item>
+        <item>Men\'s Fashion</item>
+        <item>Women\'s Fashion</item>
+        <item>Beauty &amp; Personal Care</item>
+        <item>Electronics</item>
+        <item>Pet Accessories</item>
+        <item>Toys</item>
+        <item>Jewllery &amp; Accessories</item>
+        <item>Furniture</item>
+        <item>Books</item>
+        <item>Car Accessories</item>
+        <item>Mobile Phone &amp; Accessories</item>
+    </string-array>
+</resources>

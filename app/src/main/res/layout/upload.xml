@@ -8,6 +8,28 @@
     tools:context=".UploadActivity">
 
     <!-- WeTrade Logo -->
+
+    <TextView
+        android:id="@+id/price2"
+        android:layout_width="128dp"
+        android:layout_height="34dp"
+        android:text="Category"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/UploadPrice"
+        app:layout_constraintTop_toBottomOf="@+id/UploadPrice" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:entries="@array/category"
+        android:spinnerMode="dialog"
+        app:layout_constraintStart_toStartOf="@+id/price2"
+        app:layout_constraintTop_toBottomOf="@+id/price2" />
+
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -56,9 +78,9 @@
 
     <Button
         android:id="@+id/UploadPhotosButton"
-        android:layout_width="346dp"
-        android:layout_height="219dp"
-        android:layout_marginTop="22dp"
+        android:layout_width="82dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="128dp"
         android:text="+"
         android:textSize="40sp"
         app:layout_constraintStart_toStartOf="@+id/textView4"
@@ -78,45 +100,45 @@
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="143dp"
-        android:layout_height="52dp"
+        android:layout_width="147dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="8dp"
         android:text="Description"
         android:textColor="#000000"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/adddescription"
-        app:layout_constraintStart_toStartOf="@+id/textView4"
 
-        />
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <TextView
         android:id="@+id/price"
-        android:layout_width="62dp"
-        android:layout_height="21dp"
+        android:layout_width="71dp"
+        android:layout_height="37dp"
         android:text="Price"
         android:textColor="#000000"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/UploadPrice"
-        app:layout_constraintStart_toStartOf="@+id/adddescription" />
+        app:layout_constraintStart_toStartOf="@+id/adddescription"
+        app:layout_constraintTop_toBottomOf="@+id/adddescription" />
 
     <TextView
         android:id="@+id/UploadPrice"
-        android:layout_width="304dp"
-        android:layout_height="48dp"
+        android:layout_width="322dp"
+        android:layout_height="40dp"
         android:text="Upload Price Here"
-        android:textSize="16sp"
 
-        app:layout_constraintBottom_toTopOf="@+id/add1"
-        app:layout_constraintStart_toStartOf="@+id/price" />
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/price"
+        app:layout_constraintTop_toBottomOf="@+id/price" />
 
     <TextView
 
         android:id="@+id/adddescription"
-        android:layout_width="349dp"
-        android:layout_height="130dp"
+        android:layout_width="328dp"
+        android:layout_height="50dp"
         android:text="Add Description Here"
 
-        app:layout_constraintBottom_toTopOf="@+id/price"
-        app:layout_constraintStart_toStartOf="@+id/textView5" />
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <ImageView
         android:id="@+id/home1"
@@ -209,6 +231,25 @@
         android:text="Settings"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/accountSettings1" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="179dp"
+        android:layout_height="159dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UploadPhotosButton"
+        app:srcCompat="@drawable/bag" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        app:layout_constraintBottom_toTopOf="@+id/add1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

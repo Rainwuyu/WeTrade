@@ -9,27 +9,16 @@
 
     <!-- WeTrade Logo -->
 
-    <TextView
-        android:id="@+id/price2"
-        android:layout_width="128dp"
-        android:layout_height="34dp"
-        android:text="Category"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/textView11"
-        app:layout_constraintTop_toBottomOf="@+id/UploadPrice" />
-
 
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="253dp"
         android:layout_height="48dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="10dp"
         android:entries="@array/category"
         android:spinnerMode="dialog"
-        app:layout_constraintStart_toStartOf="@+id/price2"
-        app:layout_constraintTop_toBottomOf="@+id/price2" />
+        app:layout_constraintStart_toStartOf="@+id/UploadPrice"
+        app:layout_constraintTop_toBottomOf="@+id/UploadPrice" />
 
     <TextView
         android:id="@+id/textView"
@@ -143,22 +132,24 @@
 
     <ImageView
         android:id="@+id/star1"
-        android:layout_width="50dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="32dp"
+        android:layout_width="36dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="17dp"
         app:layout_constraintBottom_toTopOf="@+id/starLabel1"
         app:layout_constraintStart_toEndOf="@+id/home1"
         app:layout_constraintTop_toBottomOf="@+id/spinner"
+        app:layout_constraintVertical_bias="0.384"
         app:srcCompat="@drawable/star_icon" />
 
     <TextView
         android:id="@+id/starLabel1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
         android:text="Following"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/star1" />
+        app:layout_constraintStart_toEndOf="@+id/homeLabel1" />
 
     <ImageView
         android:id="@+id/add1"
@@ -179,42 +170,47 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/add1" />
 
+
     <ImageView
         android:id="@+id/humanIcon1"
         android:layout_width="45dp"
         android:layout_height="23dp"
 
-        android:layout_marginBottom="17dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="12dp"
         app:layout_constraintBottom_toTopOf="@+id/meLabel1"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toEndOf="@+id/add1"
         app:srcCompat="@drawable/humanicon" />
-
 
     <TextView
         android:id="@+id/meLabel1"
-        android:layout_width="66dp"
-        android:layout_height="19dp"
+        android:layout_width="41dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="4dp"
         android:text="Me"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/humanIcon1" />
+        app:layout_constraintStart_toEndOf="@+id/addLabel1" />
 
     <ImageView
         android:id="@+id/accountSettings1"
         android:layout_width="30dp"
         android:layout_height="30dp"
 
+        android:layout_marginStart="28dp"
         android:layout_marginBottom="12dp"
         app:layout_constraintBottom_toTopOf="@+id/settingsLabel1"
-        app:layout_constraintStart_toEndOf="@+id/UploadPrice"
+        app:layout_constraintStart_toEndOf="@+id/humanIcon1"
         app:srcCompat="@drawable/account_settings" />
 
     <TextView
         android:id="@+id/settingsLabel1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
         android:text="Settings"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/accountSettings1" />
+        app:layout_constraintStart_toEndOf="@+id/meLabel1" />
 
     <ImageView
         android:id="@+id/imageView3"

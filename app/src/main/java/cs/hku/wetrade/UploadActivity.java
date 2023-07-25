@@ -23,6 +23,7 @@ import android.util.Base64;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -33,6 +34,8 @@ public class UploadActivity extends AppCompatActivity {
     private Spinner spinner;
     Button uploadImage, uploadAll;
     ImageView picture;
+    EditText disciption, itemname, stock, price;
+
     String[] mPermissionList = new String[]{
             Manifest.permission.WRITE_EXTERNAL_STORAGE,
             Manifest.permission.READ_EXTERNAL_STORAGE};
@@ -179,7 +182,8 @@ public class UploadActivity extends AppCompatActivity {
                 case REQUEST_PICK_IMAGE:
                     if (data != null) {
                         String realPathFromUri = UploadActivity.getRealPathFromUri(this, data.getData());
-                        bitmapToString(realPathFromUri, picture);
+                        bitmapToString(realPathFromUri);
+                        showImage(realPathFromUri, picture);
                     } else {
                         Toast.makeText(this, "The picture is damaged, please re-select.", Toast.LENGTH_SHORT).show();
                     }
@@ -190,15 +194,19 @@ public class UploadActivity extends AppCompatActivity {
     }
 
     // Convert the image corresponding to the filePath address to a Bitmap, and then convert the bitmap to a Base64 String
-    public static String bitmapToString(String filePath, ImageView picture) {
+    public static String bitmapToString(String filePath) {
         Bitmap bm = getSmallBitmap(filePath);
-        picture.setImageBitmap(bm);
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
 
         bm.compress(Bitmap.CompressFormat.JPEG, 40, baos);
         byte[] b = baos.toByteArray();
         // Get the converted String of the image, and then pass this string to the background as a normal string parameter
         return Base64.encodeToString(b, Base64.DEFAULT);
+    }
+
+    public void showImage(String filePath, ImageView picture) {
+        Bitmap bm = getSmallBitmap(filePath);
+        picture.setImageBitmap(bm);
     }
 
     // The image is obtained according to the path and compressed, and the bitmap is returned for display

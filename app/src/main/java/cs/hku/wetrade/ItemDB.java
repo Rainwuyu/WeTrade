@@ -5,6 +5,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.util.Base64;
+
 public class ItemDB extends SQLiteOpenHelper {
     // Database name and version number
     private static final String DATABASE_NAME = "Item.db";
@@ -33,7 +35,7 @@ public class ItemDB extends SQLiteOpenHelper {
         String createTableQuery = "CREATE TABLE " + ITEM_TABLE_NAME + "(" +
                 COLUMN_PID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 COLUMN_ITEMNAME + " TEXT, " +
-                COLUMN_ITEMIMAGE + " BLOB, " +
+                COLUMN_ITEMIMAGE + " TEXT, " +
                 COLUMN_CATEGORY + " TEXT, " +
                 COLUMN_PRICE + " FLOAT, " +
                 COLUMN_DISCRIPTION + " TEXT, " +
@@ -51,7 +53,7 @@ public class ItemDB extends SQLiteOpenHelper {
     }
 
     // Insert data
-    public void insertData(String itemname, long itemimage, String category, float price, String discription, int stock, String seller) {
+    public void insertData(String itemname, Base64 itemimage, String category, float price, String discription, int stock, String seller) {
         SQLiteDatabase db = getWritableDatabase();
         String insertQuery = "INSERT INTO " + ITEM_TABLE_NAME + " (" +
                 COLUMN_ITEMNAME + ", " +

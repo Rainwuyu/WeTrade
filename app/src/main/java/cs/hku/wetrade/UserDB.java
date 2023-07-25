@@ -38,7 +38,7 @@ public class UserDB extends SQLiteOpenHelper {
                 COLUMN_UID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 COLUMN_USERNAME + " TEXT UNIQUE, " +
                 COLUMN_PASSWORD + " TEXT, " +
-                COLUMN_USERIMAGE + " BLOB, " +
+                COLUMN_USERIMAGE + " TEXT, " +
                 COLUMN_FOLLOWING + " INTEGER, " +
                 COLUMN_FOLLOWERS + " INTEGER, " +
                 COLUMN_POSTS + " INTEGER, " +

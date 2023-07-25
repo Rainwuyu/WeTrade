@@ -52,7 +52,114 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
+    <!--Upload Successful-->
+    <TextView
+        android:id="@+id/contactUs"
+        android:layout_width="289dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:text="Upload Successful"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.433"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <!--Display Photo-->
+    <ImageView
+        android:id="@+id/uploadedPhoto"
+        android:layout_width="181dp"
+        android:layout_height="144dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/bag"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contactUs" />
+
+    <TextView
+        android:id="@+id/itemName"
+        android:layout_width="257dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="12dp"
+        android:text="Item Name"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/uploadedPhoto" />
+
+    <TextView
+        android:id="@+id/itemCategory"
+        android:layout_width="257dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="12dp"
+        android:text="Item Category"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemName" />
+
+    <TextView
+        android:id="@+id/itemStockQuantity"
+        android:layout_width="257dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="12dp"
+        android:text="Stock Quantity"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemCategory" />
+
+    <TextView
+        android:id="@+id/itemDescription"
+        android:layout_width="257dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="12dp"
+        android:text="Item Description"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemStockQuantity" />
+
+    <TextView
+        android:id="@+id/itemPrice"
+        android:layout_width="257dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="12dp"
+        android:text="Item Price"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemDescription" />
+
+    <Button
+        android:id="@+id/OK"
+        android:layout_width="200dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:onClick="Check"
+        android:text="OK"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemPrice" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

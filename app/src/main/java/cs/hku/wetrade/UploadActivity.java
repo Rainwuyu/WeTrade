@@ -23,6 +23,7 @@ import android.util.Base64;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -31,6 +32,7 @@ import java.io.ByteArrayOutputStream;
 public class UploadActivity extends AppCompatActivity {
     private Spinner spinner;
     Button uploadImage;
+    protected ImageView picture;
     String[] mPermissionList = new String[]{
             Manifest.permission.WRITE_EXTERNAL_STORAGE,
             Manifest.permission.READ_EXTERNAL_STORAGE};
@@ -43,12 +45,12 @@ public class UploadActivity extends AppCompatActivity {
         initView();
 
         uploadImage = (Button) findViewById(R.id.UploadPhotosButton);
+        picture = (ImageView) findViewById(R.id.imageView3);
 
         uploadImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 ActivityCompat.requestPermissions(UploadActivity.this, mPermissionList, 100);
-//                bitmapToString();
             }
         });
 
@@ -168,8 +170,9 @@ public class UploadActivity extends AppCompatActivity {
                 case REQUEST_PICK_IMAGE:
                     if (data != null) {
                         String realPathFromUri = UploadActivity.getRealPathFromUri(this, data.getData());
+                        bitmapToString(realPathFromUri, picture);
                     } else {
-                        Toast.makeText(this, "图片损坏，请重新选择", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, "The picture is damaged, please re-select.", Toast.LENGTH_SHORT).show();
                     }
 
                     break;
@@ -178,8 +181,9 @@ public class UploadActivity extends AppCompatActivity {
     }
 
     // 把filePath地址对应的图片转换成Bitmap，然后再将bitmap转换成Base64字符串String
-    public static String bitmapToString(String filePath) {
+    public static String bitmapToString(String filePath, ImageView picture) {
         Bitmap bm = getSmallBitmap(filePath);
+        picture.setImageBitmap(bm);
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
 
         // 1.5M的压缩后在100Kb以内，测试得值,压缩后的大小=94486字节,压缩后的大小=74473字节

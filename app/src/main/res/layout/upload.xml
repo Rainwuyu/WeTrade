@@ -105,7 +105,7 @@
         android:layout_height="31dp"
         android:layout_marginTop="24dp"
         android:text="Price"
-        android:textSize="18sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/textView11"
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
@@ -289,8 +289,8 @@
 
     <EditText
         android:id="@+id/textView16"
-        android:layout_width="183dp"
-        android:layout_height="47dp"
+        android:layout_width="192dp"
+        android:layout_height="52dp"
         android:hint="Upload Price Here"
         app:layout_constraintStart_toStartOf="@+id/textView15"
         app:layout_constraintTop_toBottomOf="@+id/textView15" />

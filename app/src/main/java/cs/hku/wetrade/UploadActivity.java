@@ -31,8 +31,8 @@ import java.io.ByteArrayOutputStream;
 
 public class UploadActivity extends AppCompatActivity {
     private Spinner spinner;
-    Button uploadImage;
-    protected ImageView picture;
+    Button uploadImage, uploadAll;
+    ImageView picture;
     String[] mPermissionList = new String[]{
             Manifest.permission.WRITE_EXTERNAL_STORAGE,
             Manifest.permission.READ_EXTERNAL_STORAGE};
@@ -45,12 +45,21 @@ public class UploadActivity extends AppCompatActivity {
         initView();
 
         uploadImage = (Button) findViewById(R.id.UploadPhotosButton);
+        uploadAll = (Button) findViewById(R.id.button2);
         picture = (ImageView) findViewById(R.id.imageView3);
 
         uploadImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 ActivityCompat.requestPermissions(UploadActivity.this, mPermissionList, 100);
+            }
+        });
+
+        uploadAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Toast.makeText(getApplicationContext(), "Upload successfully!", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -180,23 +189,19 @@ public class UploadActivity extends AppCompatActivity {
         }
     }
 
-    // 把filePath地址对应的图片转换成Bitmap，然后再将bitmap转换成Base64字符串String
+    // Convert the image corresponding to the filePath address to a Bitmap, and then convert the bitmap to a Base64 String
     public static String bitmapToString(String filePath, ImageView picture) {
         Bitmap bm = getSmallBitmap(filePath);
         picture.setImageBitmap(bm);
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
 
-        // 1.5M的压缩后在100Kb以内，测试得值,压缩后的大小=94486字节,压缩后的大小=74473字节
-        // 这里的JPEG 如果换成PNG，那么压缩的就有600kB这样.
-        // 实际项目中，可以根据需要考虑图片压缩以及压缩的质量。
         bm.compress(Bitmap.CompressFormat.JPEG, 40, baos);
         byte[] b = baos.toByteArray();
-        // 在这里获取到图片转换后的字符串，然后就可以将这个字符串当做普通的String字符串参数传给后台
-        // 如果有很多张图片要上传，那么可以考虑将转换后的Base64字符串添加到一个List里面，一并传给后台。
+        // Get the converted String of the image, and then pass this string to the background as a normal string parameter
         return Base64.encodeToString(b, Base64.DEFAULT);
     }
 
-    // 根据路径获得图片并压缩，返回bitmap用于显示
+    // The image is obtained according to the path and compressed, and the bitmap is returned for display
     public static Bitmap getSmallBitmap(String filePath) {
         final BitmapFactory.Options options = new BitmapFactory.Options();
         options.inJustDecodeBounds = true;
@@ -208,7 +213,7 @@ public class UploadActivity extends AppCompatActivity {
         return BitmapFactory.decodeFile(filePath, options);
     }
 
-    //计算图片的缩放质量
+    // Calculate the zoom quality of the picture
     public static int calculateInSampleSize(BitmapFactory.Options options, int reqWidth, int reqHeight) {
         final int height = options.outHeight;
         final int width = options.outWidth;

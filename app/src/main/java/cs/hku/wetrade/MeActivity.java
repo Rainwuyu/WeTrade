@@ -42,13 +42,12 @@ public class MeActivity extends AppCompatActivity {
             }
         });
 
-//        upload.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent=new Intent(HomeActivity.this, UploadActivity.class);
-//                startActivity(intent);
-//            }
-//        });
+        upload.setOnClickListener(new View.OnClickListener() {@Override
+        public void onClick(View view) {
+            Intent intent=new Intent(MeActivity.this, UploadActivity.class);
+              startActivity(intent);
+           }
+        });
 
         me.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -120,8 +120,7 @@
         app:layout_constraintBottom_toTopOf="@+id/homeLabel1"
         app:layout_constraintStart_toStartOf="@+id/UploadPrice"
         app:srcCompat="@drawable/home" />
-
-
+    
     <TextView
         android:id="@+id/homeLabel1"
         android:layout_width="wrap_content"

@@ -12,8 +12,8 @@
 
     <Spinner
         android:id="@+id/spinner"
-        android:layout_width="166dp"
-        android:layout_height="44dp"
+        android:layout_width="183dp"
+        android:layout_height="53dp"
         android:entries="@array/category"
         android:spinnerMode="dialog"
         app:layout_constraintStart_toStartOf="@+id/textView13"
@@ -255,7 +255,7 @@
         android:id="@+id/textView11"
         android:layout_width="146dp"
         android:layout_height="27dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="24dp"
         android:text="Stock Quantity"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/textView10"
@@ -266,7 +266,7 @@
         android:layout_width="192dp"
         android:layout_height="52dp"
         android:layout_marginStart="12dp"
-        android:text="Add description here"
+        android:hint="Add description here"
         app:layout_constraintStart_toEndOf="@+id/textView5"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
@@ -275,25 +275,23 @@
         android:layout_width="192dp"
         android:layout_height="48dp"
         android:layout_marginStart="12dp"
-        android:text="Add name here"
+        android:hint="Add name here"
         app:layout_constraintStart_toEndOf="@+id/textView5"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
     <EditText
         android:id="@+id/textView15"
-        android:layout_width="165dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="8dp"
-        android:text="Add stock quantity information"
+        android:layout_width="164dp"
+        android:layout_height="50dp"
+        android:hint="Add stock quantity information"
         app:layout_constraintStart_toStartOf="@+id/spinner"
         app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
     <EditText
         android:id="@+id/textView16"
-        android:layout_width="178dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="12dp"
-        android:text="Upload Price Here"
+        android:layout_width="183dp"
+        android:layout_height="47dp"
+        android:hint="Upload Price Here"
         app:layout_constraintStart_toStartOf="@+id/textView15"
         app:layout_constraintTop_toBottomOf="@+id/textView15" />
 

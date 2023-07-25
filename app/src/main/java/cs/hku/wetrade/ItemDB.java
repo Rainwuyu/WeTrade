@@ -5,8 +5,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import java.util.Base64;
-
 public class ItemDB extends SQLiteOpenHelper {
     // Database name and version number
     private static final String DATABASE_NAME = "Item.db";
@@ -21,7 +19,7 @@ public class ItemDB extends SQLiteOpenHelper {
     private static final String COLUMN_ITEMIMAGE = "itemimage";
     private static final String COLUMN_CATEGORY = "category";
     private static final String COLUMN_PRICE = "price";
-    private static final String COLUMN_DISCRIPTION = "discription";
+    private static final String COLUMN_DESCRIPTION = "description";
     private static final String COLUMN_STOCK = "stock";
     private static final String COLUMN_SELLER = "seller";
 
@@ -38,7 +36,7 @@ public class ItemDB extends SQLiteOpenHelper {
                 COLUMN_ITEMIMAGE + " TEXT, " +
                 COLUMN_CATEGORY + " TEXT, " +
                 COLUMN_PRICE + " FLOAT, " +
-                COLUMN_DISCRIPTION + " TEXT, " +
+                COLUMN_DESCRIPTION + " TEXT, " +
                 COLUMN_STOCK + " INTEGER, " +
                 COLUMN_SELLER + " TEXT)";
         db.execSQL(createTableQuery);
@@ -53,21 +51,21 @@ public class ItemDB extends SQLiteOpenHelper {
     }
 
     // Insert data
-    public void insertData(String itemname, Base64 itemimage, String category, float price, String discription, int stock, String seller) {
+    public void insertData(String itemname, String itemimage, String category, float price, String description, int stock, String seller) {
         SQLiteDatabase db = getWritableDatabase();
         String insertQuery = "INSERT INTO " + ITEM_TABLE_NAME + " (" +
                 COLUMN_ITEMNAME + ", " +
                 COLUMN_ITEMIMAGE + ", " +
                 COLUMN_CATEGORY + ", " +
                 COLUMN_PRICE + ", " +
-                COLUMN_DISCRIPTION + ", " +
+                COLUMN_DESCRIPTION + ", " +
                 COLUMN_STOCK + ", " +
                 COLUMN_SELLER + ") VALUES ('" +
                 itemname + "', '" +
                 itemimage + "', '" +
                 category + "', '" +
                 price + "', '" +
-                discription + "', '" +
+                description + "', '" +
                 stock + "', '" +
                 seller + "')";
         db.execSQL(insertQuery);

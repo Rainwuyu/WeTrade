@@ -12,6 +12,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -34,8 +35,9 @@ public class UploadActivity extends AppCompatActivity {
     private Spinner spinner;
     Button uploadImage, uploadAll;
     ImageView picture;
-    EditText disciption, itemname, stock, price;
-
+    EditText description, itemname, stock, price;
+    String image;
+    private String getContent;
     String[] mPermissionList = new String[]{
             Manifest.permission.WRITE_EXTERNAL_STORAGE,
             Manifest.permission.READ_EXTERNAL_STORAGE};
@@ -50,6 +52,14 @@ public class UploadActivity extends AppCompatActivity {
         uploadImage = (Button) findViewById(R.id.UploadPhotosButton);
         uploadAll = (Button) findViewById(R.id.button2);
         picture = (ImageView) findViewById(R.id.imageView3);
+        description = (EditText) findViewById(R.id.textView12);
+        itemname = (EditText) findViewById(R.id.textView13);
+        stock = (EditText) findViewById(R.id.textView15);
+        price = (EditText) findViewById(R.id.textView16);
+        spinner = findViewById(R.id.spinner);
+
+        ItemDB itemDBHelper = new ItemDB(UploadActivity.this);
+        SQLiteDatabase db = itemDBHelper.getWritableDatabase(); // Gets a writable database instance
 
         uploadImage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,8 +71,28 @@ public class UploadActivity extends AppCompatActivity {
         uploadAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String desc = description.getText().toString().trim();
+                String iname = itemname.getText().toString().trim();
+                int stoc = Integer.parseInt(stock.getText().toString().trim());
+                float pric = Float.parseFloat(price.getText().toString().trim());
 
-                Toast.makeText(getApplicationContext(), "Upload successfully!", Toast.LENGTH_SHORT).show();
+                if (desc.equals("") || iname.equals("") || String.valueOf(stoc).equals("") || String.valueOf(pric).equals("") || image.equals("")) {
+                    Toast.makeText(UploadActivity.this, "Incomplete information!", Toast.LENGTH_SHORT).show();
+                } else {
+                    itemDBHelper.insertData(iname, image, getContent, pric, desc, stoc, MeActivity.uname);
+                    Toast.makeText(UploadActivity.this, "Upload successfully!", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        spinner.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+                getContent = UploadActivity.this.getResources().getStringArray(R.array.category)[arg2];
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                getContent = "Not classified";
             }
         });
 
@@ -80,7 +110,7 @@ public class UploadActivity extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-                Toast.makeText(getApplicationContext(), "Category cannot be null!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(UploadActivity.this, "Category cannot be null!", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -120,10 +150,10 @@ public class UploadActivity extends AppCompatActivity {
     private static String getRealPathFromUri(Context context, Uri uri) {
         String filePath = null;
         if (DocumentsContract.isDocumentUri(context, uri)) {
-            // 如果是document类型的 uri, 则通过document id来进行处理
+            // If it is a document uri, it is processed through the document id
             String documentId = DocumentsContract.getDocumentId(uri);
             if (isMediaDocument(uri)) { // MediaProvider
-            // 使用':'分割
+            // Split with ':'
                 String id = documentId.split(":")[1];
                 String selection = MediaStore.Images.Media._ID + "=?";
                 String[] selectionArgs = {id};
@@ -133,10 +163,10 @@ public class UploadActivity extends AppCompatActivity {
                 filePath = getDataColumn(context, contentUri, null, null);
             }
         } else if ("content".equalsIgnoreCase(uri.getScheme())) {
-            // 如果是 content 类型的 Uri
+            // If it is a Uri of type content
             filePath = getDataColumn(context, uri, null, null);
         } else if ("file".equals(uri.getScheme())) {
-            // 如果是 file 类型的 Uri,直接获取图片对应的路径
+            // If the Uri is of the file type, obtain the path corresponding to the image directly
             filePath = uri.getPath();
         }
         return filePath;
@@ -182,7 +212,7 @@ public class UploadActivity extends AppCompatActivity {
                 case REQUEST_PICK_IMAGE:
                     if (data != null) {
                         String realPathFromUri = UploadActivity.getRealPathFromUri(this, data.getData());
-                        bitmapToString(realPathFromUri);
+                        image = bitmapToString(realPathFromUri);
                         showImage(realPathFromUri, picture);
                     } else {
                         Toast.makeText(this, "The picture is damaged, please re-select.", Toast.LENGTH_SHORT).show();

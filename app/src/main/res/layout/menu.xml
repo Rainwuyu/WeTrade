@@ -78,9 +78,9 @@
                     android:id="@+id/instructionPara"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Following "
+                    android:text="Menu"
                     android:textColor="#000000"
-                    android:textSize="16sp"
+                    android:textSize="30sp"
                     android:textStyle="bold" />
             </TableRow>
 
@@ -97,20 +97,21 @@
                     android:layout_marginRight="10dp"
                     android:src="@drawable/bag" />
 
-                <ImageView
-                    android:id="@+id/a2Card"
-                    android:layout_width="80dp"
-                    android:layout_height="100dp"
-                    android:layout_marginRight="20dp"
-                    android:src="@drawable/bag" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Bag Store"
-                    android:textColor="#000000"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                <Button
+                    android:id="@+id/a2Card"
+                    android:layout_width="268dp"
+                    android:layout_height="72dp"
+                    android:layout_marginStart="16dp"
+                    android:backgroundTint="@android:color/holo_green_dark"
+                    android:onClick="Check"
+                    android:text="Baby Clothing and Accessories"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.776" />
+
+
 
             </TableRow>
 
@@ -127,20 +128,19 @@
                     android:layout_marginRight="10dp"
                     android:src="@drawable/bag" />
 
-                <ImageView
-                    android:id="@+id/b2Card"
-                    android:layout_width="80dp"
-                    android:layout_height="100dp"
-                    android:layout_marginRight="20dp"
-                    android:src="@drawable/bag" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Bag Store"
-                    android:textSize="16sp"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
+                <Button
+                    android:id="@+id/b2Card"
+                    android:layout_width="268dp"
+                    android:layout_height="72dp"
+                    android:layout_marginStart="16dp"
+                    android:backgroundTint="@android:color/holo_green_dark"
+                    android:onClick="Check"
+                    android:text="Men's Fashion"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.776" />
             </TableRow>
 
             <TableRow
@@ -156,20 +156,19 @@
                     android:layout_marginRight="10dp"
                     android:src="@drawable/bag" />
 
-                <ImageView
-                    android:id="@+id/c2Card"
-                    android:layout_width="80dp"
-                    android:layout_height="100dp"
-                    android:layout_marginRight="20dp"
-                    android:src="@drawable/bag" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Bag Store"
-                    android:textSize="16sp"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
+                <Button
+                    android:id="@+id/c2Card"
+                    android:layout_width="268dp"
+                    android:layout_height="72dp"
+                    android:layout_marginStart="16dp"
+                    android:backgroundTint="@android:color/holo_green_dark"
+                    android:onClick="Check"
+                    android:text="Women's Fashion"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.776" />
 
             </TableRow>
 
@@ -186,20 +185,19 @@
                     android:layout_marginRight="10dp"
                     android:src="@drawable/bag" />
 
-                <ImageView
-                    android:id="@+id/d2Card"
-                    android:layout_width="80dp"
-                    android:layout_height="100dp"
-                    android:layout_marginRight="20dp"
-                    android:src="@drawable/bag" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Bag Store"
-                    android:textColor="#000000"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                <Button
+                    android:id="@+id/d2Card"
+                    android:layout_width="268dp"
+                    android:layout_height="72dp"
+                    android:layout_marginStart="16dp"
+                    android:backgroundTint="@android:color/holo_green_dark"
+                    android:onClick="Check"
+                    android:text="Women's Fashion"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.776" />
 
 
             </TableRow>
@@ -217,12 +215,6 @@
                     android:layout_marginRight="10dp"
                     android:src="@drawable/bag" />
 
-                <ImageView
-                    android:id="@+id/e2Card"
-                    android:layout_width="80dp"
-                    android:layout_height="100dp"
-                    android:layout_marginRight="20dp"
-                    android:src="@drawable/bag" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -245,13 +237,6 @@
                     android:layout_width="80dp"
                     android:layout_height="100dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/bag" />
-
-                <ImageView
-                    android:id="@+id/f2Card"
-                    android:layout_width="80dp"
-                    android:layout_height="100dp"
-                    android:layout_marginRight="20dp"
                     android:src="@drawable/bag" />
 
                 <TextView

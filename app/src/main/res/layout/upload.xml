@@ -2,9 +2,9 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/ScreenBackground"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    style="@style/ScreenBackground"
     tools:context=".UploadActivity">
 
     <!-- WeTrade Logo -->
@@ -46,96 +46,169 @@
     <!-- Slogan -->
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="244dp"
+        android:layout_height="0dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:text="We trade what you want."
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <!--Upload Label-->
-    <TextView
-        android:id="@+id/uploadLabel"
-        android:layout_width="150dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="104dp"
-        android:layout_marginEnd="8dp"
-        android:fontFamily="@font/open_sans_semibold"
-        android:text="Upload"
-        android:textColor="#000000"
-        android:textSize="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.081"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <!--Item Name Label-->
-
-    <!--Enter Item Name-->
-    <TextView
-        android:id="@+id/itemNameLabel"
-        android:layout_width="232dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="8dp"
-        android:gravity="start"
-        android:text="Item Name"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.156"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/uploadLabel" />
-
-    <EditText
-        android:id="@+id/enterItemName"
-        android:layout_width="367dp"
-        android:layout_height="50dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-        android:background="#F2F2F2"
-        android:hint="Enter Item Name"
-        android:padding="15dp"
-        android:textColorHint="#000"
-        android:textStyle="bold|italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/itemNameLabel" />
-
-    <!--Upload Item Image Label-->
-
-    <!--Upload Item Image Button-->
-
-    <TextView
-        android:id="@+id/insertItemImageLabel"
-        android:layout_width="166dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="24dp"
-        android:gravity="start"
-        android:text="Item Image"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enterItemName" />
-
     <Button
-        android:id="@+id/insertItemImageButton"
+        android:id="@+id/UploadPhotosButton"
+        android:layout_width="346dp"
+        android:layout_height="219dp"
+        android:layout_marginTop="22dp"
+        android:text="+"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="92dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="12dp"
+        android:text="Photos"
+        android:textColor="#000000"
+        android:textSize="20sp"
+
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="143dp"
+        android:layout_height="52dp"
+        android:text="Description"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/adddescription"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+
+        />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="62dp"
+        android:layout_height="21dp"
+        android:text="Price"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/UploadPrice"
+        app:layout_constraintStart_toStartOf="@+id/adddescription" />
+
+    <TextView
+        android:id="@+id/UploadPrice"
+        android:layout_width="304dp"
+        android:layout_height="48dp"
+        android:text="Upload Price Here"
+        android:textSize="16sp"
+
+        app:layout_constraintBottom_toTopOf="@+id/add1"
+        app:layout_constraintStart_toStartOf="@+id/price" />
+
+    <TextView
+
+        android:id="@+id/adddescription"
+        android:layout_width="349dp"
+        android:layout_height="130dp"
+        android:text="Add Description Here"
+
+        app:layout_constraintBottom_toTopOf="@+id/price"
+        app:layout_constraintStart_toStartOf="@+id/textView5" />
+
+    <ImageView
+        android:id="@+id/home1"
+
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/homeLabel1"
+        app:layout_constraintStart_toStartOf="@+id/UploadPrice"
+        app:srcCompat="@drawable/home" />
+
+
+    <TextView
+        android:id="@+id/homeLabel1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="24dp"
-        android:background="#000"
-        android:padding="10dp"
-        android:text="Insert"
-        android:textColor="#0f0"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.2"
-        app:layout_constraintStart_toEndOf="@+id/insertItemImageLabel"
-        app:layout_constraintTop_toBottomOf="@+id/enterItemName" />
+        android:text="Home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/home1" />
+
+    <ImageView
+        android:id="@+id/star1"
+        android:layout_width="50dp"
+        android:layout_height="43dp"
+        app:layout_constraintBottom_toTopOf="@+id/starLabel1"
+        app:layout_constraintStart_toEndOf="@+id/price"
+        app:srcCompat="@drawable/star_icon" />
+
+    <TextView
+        android:id="@+id/starLabel1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Following"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/star1" />
+
+    <ImageView
+        android:id="@+id/add1"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/addLabel1"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:srcCompat="@drawable/add_create_new_plus_icon" />
+
+
+    <TextView
+        android:id="@+id/addLabel1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/add1" />
+
+    <ImageView
+        android:id="@+id/humanIcon1"
+        android:layout_width="45dp"
+        android:layout_height="23dp"
+
+        android:layout_marginBottom="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/meLabel1"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:srcCompat="@drawable/humanicon" />
+
+
+    <TextView
+        android:id="@+id/meLabel1"
+        android:layout_width="66dp"
+        android:layout_height="19dp"
+        android:text="Me"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/humanIcon1" />
+
+    <ImageView
+        android:id="@+id/accountSettings1"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/settingsLabel1"
+        app:layout_constraintStart_toEndOf="@+id/UploadPrice"
+        app:srcCompat="@drawable/account_settings" />
+
+    <TextView
+        android:id="@+id/settingsLabel1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Settings"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/accountSettings1" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

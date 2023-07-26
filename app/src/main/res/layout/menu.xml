@@ -287,6 +287,145 @@
 
             </TableRow>
 
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginTop="1dp"
+                android:gravity="left">
+
+                <ImageView
+                    android:id="@+id/h1Card"
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/bag" />
+
+                <Button
+                    android:id="@+id/h2Card"
+                    android:layout_width="268dp"
+                    android:layout_height="72dp"
+                    android:layout_marginStart="16dp"
+                    android:backgroundTint="@android:color/holo_green_dark"
+                    android:onClick="Check"
+                    android:text="Jewellery and Accessories"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.776" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginTop="1dp"
+                android:gravity="left">
+
+                <ImageView
+                    android:id="@+id/i1Card"
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/bag" />
+
+                <Button
+                    android:id="@+id/i2Card"
+                    android:layout_width="268dp"
+                    android:layout_height="72dp"
+                    android:layout_marginStart="16dp"
+                    android:backgroundTint="@android:color/holo_green_dark"
+                    android:onClick="Check"
+                    android:text="Furniture"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.776" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginTop="1dp"
+                android:gravity="left">
+
+                <ImageView
+                    android:id="@+id/j1Card"
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/bag" />
+
+                <Button
+                    android:id="@+id/j2Card"
+                    android:layout_width="268dp"
+                    android:layout_height="72dp"
+                    android:layout_marginStart="16dp"
+                    android:backgroundTint="@android:color/holo_green_dark"
+                    android:onClick="Check"
+                    android:text="Books"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.776" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginTop="1dp"
+                android:gravity="left">
+
+                <ImageView
+                    android:id="@+id/k1Card"
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/bag" />
+
+                <Button
+                    android:id="@+id/k2Card"
+                    android:layout_width="268dp"
+                    android:layout_height="72dp"
+                    android:layout_marginStart="16dp"
+                    android:backgroundTint="@android:color/holo_green_dark"
+                    android:onClick="Check"
+                    android:text="Car Accessories"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.776" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginTop="1dp"
+                android:gravity="left">
+
+                <ImageView
+                    android:id="@+id/l1Card"
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/bag" />
+
+                <Button
+                    android:id="@+id/l2Card"
+                    android:layout_width="268dp"
+                    android:layout_height="72dp"
+                    android:layout_marginStart="16dp"
+                    android:backgroundTint="@android:color/holo_green_dark"
+                    android:onClick="Check"
+                    android:text="Mobile Phone and Accessories"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.776" />
+
+            </TableRow>
         </LinearLayout>
     </ScrollView>
 

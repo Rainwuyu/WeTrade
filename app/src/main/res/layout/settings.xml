@@ -70,15 +70,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!--Service Hotline-->
+    <!--Service Hotline and Email-->
     <TextView
         android:id="@+id/serviceHotline"
-        android:layout_width="390dp"
-        android:layout_height="27dp"
+        android:layout_width="366dp"
+        android:layout_height="48dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:gravity="start"
-        android:text="Service Hotline: +86 12345678912"
+        android:text="Service Hotline: +86 12345678912
+        Email: contactus@wetrade.com"
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"

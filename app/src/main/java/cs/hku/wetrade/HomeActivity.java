@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HomeActivity extends AppCompatActivity {
-    ImageView pic;
+//    ImageView pic;
     private List<HomeItem> ItemList = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +34,7 @@ public class HomeActivity extends AppCompatActivity {
         ImageView me = findViewById(R.id.humanIcon);
         ImageView settings = findViewById(R.id.accountSettings);
         ImageView menu = findViewById(R.id.imageView2);
-        pic = findViewById(R.id.textView18);
+//        pic = findViewById(R.id.imageView4);
 
         initItem();
         RecyclerView recyclerView = (RecyclerView)findViewById(R.id.recyclerView);
@@ -109,7 +109,7 @@ public class HomeActivity extends AppCompatActivity {
                 @SuppressLint("Range") String category = cursor.getString(cursor.getColumnIndex("category"));
                 @SuppressLint("Range") String seller = cursor.getString(cursor.getColumnIndex("seller"));
                 Bitmap bimage = stringToBitmap(image);
-                pic.setImageBitmap(bimage);
+//                pic.setImageBitmap(bimage);
                 if (!name.equals("")) {
                     HomeItem homeItem = new HomeItem(id, name, bimage, stock, price, category, seller);
                     ItemList.add(homeItem);

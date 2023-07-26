@@ -17,13 +17,13 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder>{
         ImageView image;
         public ViewHolder(View view){
             super(view);
-            id = (TextView)view.findViewById(R.id.textView14);
-            name = (TextView)view.findViewById(R.id.textView17);
-            image = (ImageView)view.findViewById(R.id.textView18);
-            stock = (TextView)view.findViewById(R.id.textView19);
-            price = (TextView)view.findViewById(R.id.textView20);
-            category = (TextView)view.findViewById(R.id.textView21);
-            seller = (TextView)view.findViewById(R.id.textView22);
+            id = (TextView)view.findViewById(R.id.tid);
+            name = (TextView)view.findViewById(R.id.tname);
+            image = (ImageView)view.findViewById(R.id.timage);
+            stock = (TextView)view.findViewById(R.id.tstock);
+            price = (TextView)view.findViewById(R.id.tprice);
+            category = (TextView)view.findViewById(R.id.tcategory);
+            seller = (TextView)view.findViewById(R.id.tseller);
         }
     }
     public HomeAdapter(List<HomeItem>homeItemList){

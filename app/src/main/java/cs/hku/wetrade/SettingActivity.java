@@ -72,7 +72,7 @@ public class SettingActivity extends AppCompatActivity {
             }
         });
 
-        ImageView menu = findViewById(R.id.imageView);
+        ImageView menu = findViewById(R.id.imageView2);
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

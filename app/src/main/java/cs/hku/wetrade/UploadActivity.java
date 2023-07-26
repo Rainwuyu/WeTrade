@@ -47,6 +47,13 @@ public class UploadActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        ImageView menu = findViewById(R.id.imageView2);
+        ImageView home = findViewById(R.id.home);
+        ImageView following = findViewById(R.id.star);
+        ImageView upload = findViewById(R.id.add);
+        ImageView me = findViewById(R.id.humanIcon);
+        ImageView settings = findViewById(R.id.accountSettings);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.upload);
         initView();
@@ -59,15 +66,45 @@ public class UploadActivity extends AppCompatActivity {
         stock = (EditText) findViewById(R.id.textView15);
         price = (EditText) findViewById(R.id.textView16);
         spinner = findViewById(R.id.spinner);
-        ImageView menu = findViewById(R.id.imageView);
-        ImageView home = findViewById(R.id.home);
-        ImageView following = findViewById(R.id.star);
-        ImageView upload = findViewById(R.id.add);
-        ImageView me = findViewById(R.id.humanIcon);
-        ImageView settings = findViewById(R.id.accountSettings);
+
 
         ItemDB itemDBHelper = new ItemDB(UploadActivity.this);
         SQLiteDatabase db = itemDBHelper.getWritableDatabase(); // Gets a writable database instance
+
+        uploadImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ActivityCompat.requestPermissions(UploadActivity.this, mPermissionList, 100);
+            }
+        });
+
+        uploadAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String desc = description.getText().toString().trim();
+                String iname = itemname.getText().toString().trim();
+                int stoc = Integer.parseInt(stock.getText().toString().trim());
+                float pric = Float.parseFloat(price.getText().toString().trim());
+
+                if (desc.equals("") || iname.equals("") || String.valueOf(stoc).equals("") || String.valueOf(pric).equals("") || image.equals("")) {
+                    Toast.makeText(UploadActivity.this, "Incomplete information!", Toast.LENGTH_SHORT).show();
+                } else {
+                    itemDBHelper.insertData(iname, image, getContent, pric, desc, stoc, MeActivity.uname);
+                    Toast.makeText(UploadActivity.this, "Upload successfully!", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        spinner.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+                getContent = UploadActivity.this.getResources().getStringArray(R.array.category)[arg2];
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                getContent = "Not classified";
+            }
+        });
 
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -117,42 +154,6 @@ public class UploadActivity extends AppCompatActivity {
             }
         });
 
-
-
-        uploadImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ActivityCompat.requestPermissions(UploadActivity.this, mPermissionList, 100);
-            }
-        });
-
-        uploadAll.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String desc = description.getText().toString().trim();
-                String iname = itemname.getText().toString().trim();
-                int stoc = Integer.parseInt(stock.getText().toString().trim());
-                float pric = Float.parseFloat(price.getText().toString().trim());
-
-                if (desc.equals("") || iname.equals("") || String.valueOf(stoc).equals("") || String.valueOf(pric).equals("") || image.equals("")) {
-                    Toast.makeText(UploadActivity.this, "Incomplete information!", Toast.LENGTH_SHORT).show();
-                } else {
-                    itemDBHelper.insertData(iname, image, getContent, pric, desc, stoc, MeActivity.uname);
-                    Toast.makeText(UploadActivity.this, "Upload successfully!", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-
-        spinner.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
-                getContent = UploadActivity.this.getResources().getStringArray(R.array.category)[arg2];
-            }
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                getContent = "Not classified";
-            }
-        });
 
     }
 

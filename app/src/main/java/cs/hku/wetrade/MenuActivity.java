@@ -15,7 +15,7 @@ public class MenuActivity extends AppCompatActivity {
         setContentView(R.layout.menu);
 
 
-        ImageView menu = findViewById(R.id.imageView);
+        ImageView menu = findViewById(R.id.imageView2);
         ImageView home = findViewById(R.id.home);
         ImageView following = findViewById(R.id.star);
         ImageView upload = findViewById(R.id.add);

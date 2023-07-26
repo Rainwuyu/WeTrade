@@ -22,7 +22,7 @@ public class MeActivity extends AppCompatActivity {
         ImageView upload = findViewById(R.id.add);
         ImageView me = findViewById(R.id.humanIcon);
         ImageView settings = findViewById(R.id.accountSettings);
-        ImageView menu = findViewById(R.id.imageView);
+        ImageView menu = findViewById(R.id.imageView2);
 
         loginID = (TextView) findViewById(R.id.showLoginID);
 

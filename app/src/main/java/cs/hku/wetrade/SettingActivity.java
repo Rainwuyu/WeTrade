@@ -81,6 +81,15 @@ public class SettingActivity extends AppCompatActivity {
             }
         });
 
+        ImageView basket = findViewById(R.id.imageView);
+        basket.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(SettingActivity.this, BasketActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 

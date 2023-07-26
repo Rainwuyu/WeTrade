@@ -24,6 +24,7 @@ public class MeActivity extends AppCompatActivity {
         ImageView me = findViewById(R.id.humanIcon);
         ImageView settings = findViewById(R.id.accountSettings);
         ImageView menu = findViewById(R.id.imageView2);
+        ImageView basket = findViewById(R.id.imageView);
         Button orderStatus = findViewById(R.id.orderStatus);
 
         loginID = (TextView) findViewById(R.id.showLoginID);
@@ -82,6 +83,15 @@ public class MeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(MeActivity.this, TransactionHistoryActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        basket.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MeActivity.this, BasketActivity.class);
                 startActivity(intent);
             }
         });

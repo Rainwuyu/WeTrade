@@ -15,6 +15,8 @@ import android.widget.Toast;
 
 public class AddToBasketActivity extends AppCompatActivity {
     ImageView menu = findViewById(R.id.imageView2);
+    ImageView basket = findViewById(R.id.imageView);
+
     TextView itemname, category, price, description;
     Button confirm, cancel;
 
@@ -53,6 +55,14 @@ public class AddToBasketActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(AddToBasketActivity.this, MenuActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        basket.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(AddToBasketActivity.this, BasketActivity.class);
                 startActivity(intent);
             }
         });

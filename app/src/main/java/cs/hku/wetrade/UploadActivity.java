@@ -58,6 +58,8 @@ public class UploadActivity extends AppCompatActivity {
         ImageView me = findViewById(R.id.humanIcon1);
         ImageView settings = findViewById(R.id.accountSettings1);
         ImageView menu = findViewById(R.id.imageView2);
+        ImageView basket = findViewById(R.id.imageView);
+
 
 
         uploadImage = (Button) findViewById(R.id.UploadPhotosButton);
@@ -152,6 +154,14 @@ public class UploadActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(UploadActivity.this, SettingActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        basket.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(UploadActivity.this, BasketActivity.class);
                 startActivity(intent);
             }
         });

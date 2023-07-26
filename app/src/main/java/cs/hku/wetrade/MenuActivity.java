@@ -21,6 +21,7 @@ public class MenuActivity extends AppCompatActivity {
         ImageView upload = findViewById(R.id.add);
         ImageView me = findViewById(R.id.humanIcon);
         ImageView settings = findViewById(R.id.accountSettings);
+        ImageView basket = findViewById(R.id.imageView);
 
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,7 +71,13 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-
+        basket.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MenuActivity.this, BasketActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
 

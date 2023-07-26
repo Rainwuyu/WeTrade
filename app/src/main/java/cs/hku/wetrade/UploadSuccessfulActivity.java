@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class UploadSuccessfulActivity extends AppCompatActivity {
 
@@ -19,6 +20,16 @@ public class UploadSuccessfulActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(UploadSuccessfulActivity.this, HomeActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageView basket = findViewById(R.id.imageView);
+
+        basket.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(UploadSuccessfulActivity.this, BasketActivity.class);
                 startActivity(intent);
             }
         });

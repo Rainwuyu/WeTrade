@@ -19,6 +19,7 @@ public class FollowingActivity extends AppCompatActivity {
         ImageView upload = findViewById(R.id.add);
         ImageView me = findViewById(R.id.humanIcon);
         ImageView settings = findViewById(R.id.accountSettings);
+        ImageView menu = findViewById(R.id.imageView);
 
         home.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,6 +57,14 @@ public class FollowingActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(FollowingActivity.this, SettingActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(FollowingActivity.this, MenuActivity.class);
                 startActivity(intent);
             }
         });

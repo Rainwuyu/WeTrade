@@ -59,9 +59,65 @@ public class UploadActivity extends AppCompatActivity {
         stock = (EditText) findViewById(R.id.textView15);
         price = (EditText) findViewById(R.id.textView16);
         spinner = findViewById(R.id.spinner);
+        ImageView menu = findViewById(R.id.imageView);
+        ImageView home = findViewById(R.id.home);
+        ImageView following = findViewById(R.id.star);
+        ImageView upload = findViewById(R.id.add);
+        ImageView me = findViewById(R.id.humanIcon);
+        ImageView settings = findViewById(R.id.accountSettings);
 
         ItemDB itemDBHelper = new ItemDB(UploadActivity.this);
         SQLiteDatabase db = itemDBHelper.getWritableDatabase(); // Gets a writable database instance
+
+        menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(UploadActivity.this, MenuActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(UploadActivity.this, HomeActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        following.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(UploadActivity.this, FollowingActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        upload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(UploadActivity.this, UploadActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        me.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(UploadActivity.this, MeActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(UploadActivity.this, SettingActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
 
         uploadImage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -277,5 +333,10 @@ public class UploadActivity extends AppCompatActivity {
             }
         }
         return super.onTouchEvent(event);
+
+
     }
+
+
+
 }

@@ -22,6 +22,8 @@ public class MeActivity extends AppCompatActivity {
         ImageView upload = findViewById(R.id.add);
         ImageView me = findViewById(R.id.humanIcon);
         ImageView settings = findViewById(R.id.accountSettings);
+        ImageView menu = findViewById(R.id.imageView);
+
         loginID = (TextView) findViewById(R.id.showLoginID);
 
         loginID.setText(uname);
@@ -61,6 +63,14 @@ public class MeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(MeActivity.this, SettingActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MeActivity.this, MenuActivity.class);
                 startActivity(intent);
             }
         });

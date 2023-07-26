@@ -2,9 +2,9 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ScreenBackground"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    style="@style/ScreenBackground">
+    android:layout_height="match_parent">
 
     <!-- WeTrade Logo -->
     <TextView
@@ -19,7 +19,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!--Order Status Button-->
+
     <!--Shopping Cart Icon-->
+
+    <Button
+        android:id="@+id/orderStatus"
+        android:layout_width="120dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:onClick="Check"
+        android:text="Order Status"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/showLoginID"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
@@ -133,8 +153,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="8dp"
-        android:gravity="center"
         android:fontFamily="@font/open_sans_semibold"
+        android:gravity="center"
         android:text="LoginID"
         android:textColor="#000000"
         android:textSize="30dp"
@@ -418,7 +438,6 @@
         android:text="Settings"
         app:layout_constraintStart_toEndOf="@+id/meLabel"
         app:layout_constraintTop_toBottomOf="@+id/accountSettings" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

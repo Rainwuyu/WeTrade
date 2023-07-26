@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -23,6 +24,7 @@ public class MeActivity extends AppCompatActivity {
         ImageView me = findViewById(R.id.humanIcon);
         ImageView settings = findViewById(R.id.accountSettings);
         ImageView menu = findViewById(R.id.imageView2);
+        Button orderStatus = findViewById(R.id.orderStatus);
 
         loginID = (TextView) findViewById(R.id.showLoginID);
 
@@ -71,6 +73,15 @@ public class MeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(MeActivity.this, MenuActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        orderStatus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MeActivity.this, TransactionHistoryActivity.class);
                 startActivity(intent);
             }
         });

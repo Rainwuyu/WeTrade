@@ -92,10 +92,10 @@
 
                 <ImageView
                     android:id="@+id/a1Card"
-                    android:layout_width="80dp"
-                    android:layout_height="100dp"
+                    android:layout_width="91dp"
+                    android:layout_height="105dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/bag" />
+                    android:src="@drawable/Babyclothes" />
 
 
                 <Button
@@ -126,7 +126,7 @@
                     android:layout_width="80dp"
                     android:layout_height="100dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/bag" />
+                    android:src="@drawable/Mensfansion" />
 
 
                 <Button
@@ -154,7 +154,7 @@
                     android:layout_width="80dp"
                     android:layout_height="100dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/bag" />
+                    android:src="@drawable/Womensfansion" />
 
 
                 <Button
@@ -183,7 +183,7 @@
                     android:layout_width="80dp"
                     android:layout_height="100dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/bag" />
+                    android:src="@drawable/Beauty" />
 
 
                 <Button
@@ -213,7 +213,7 @@
                     android:layout_width="80dp"
                     android:layout_height="100dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/bag" />
+                    android:src="@drawable/Electronics" />
 
 
                 <Button
@@ -242,7 +242,7 @@
                     android:layout_width="80dp"
                     android:layout_height="100dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/bag" />
+                    android:src="@drawable/petaccessories" />
 
                 <Button
                     android:id="@+id/f2Card"
@@ -270,8 +270,7 @@
                     android:layout_width="80dp"
                     android:layout_height="100dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/bag" />
-
+                    android:src="@drawable/TTT"
                 <Button
                     android:id="@+id/g2Card"
                     android:layout_width="268dp"
@@ -298,7 +297,7 @@
                     android:layout_width="80dp"
                     android:layout_height="100dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/bag" />
+                    android:src="@drawable/Je" />
 
                 <Button
                     android:id="@+id/h2Card"
@@ -326,7 +325,7 @@
                     android:layout_width="80dp"
                     android:layout_height="100dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/bag" />
+                    android:src="@drawable/furniture" />
 
                 <Button
                     android:id="@+id/i2Card"
@@ -354,7 +353,7 @@
                     android:layout_width="80dp"
                     android:layout_height="100dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/bag" />
+                    android:src="@drawable/books" />
 
                 <Button
                     android:id="@+id/j2Card"
@@ -382,7 +381,7 @@
                     android:layout_width="80dp"
                     android:layout_height="100dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/bag" />
+                    android:src="@drawable/CAR" />
 
                 <Button
                     android:id="@+id/k2Card"
@@ -410,7 +409,7 @@
                     android:layout_width="80dp"
                     android:layout_height="100dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/bag" />
+                    android:src="@drawable/PHONE" />
 
                 <Button
                     android:id="@+id/l2Card"

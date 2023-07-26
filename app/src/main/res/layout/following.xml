@@ -92,22 +92,22 @@
 
                 <ImageView
                     android:id="@+id/a1Card"
-                    android:layout_width="80dp"
-                    android:layout_height="100dp"
+                    android:layout_width="105dp"
+                    android:layout_height="match_parent"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/bag" />
+                    android:src="@drawable/ipad" />
 
                 <ImageView
                     android:id="@+id/a2Card"
-                    android:layout_width="80dp"
-                    android:layout_height="100dp"
+                    android:layout_width="95dp"
+                    android:layout_height="match_parent"
                     android:layout_marginRight="20dp"
-                    android:src="@drawable/bag" />
+                    android:src="@drawable/IPHONE" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Bag Store"
+                    android:text="Apple Store"
                     android:textColor="#000000"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -122,22 +122,22 @@
 
                 <ImageView
                     android:id="@+id/b1Card"
-                    android:layout_width="80dp"
-                    android:layout_height="100dp"
+                    android:layout_width="105dp"
+                    android:layout_height="match_parent"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/bag" />
+                    android:src="@drawable/AWATCH" />
 
                 <ImageView
                     android:id="@+id/b2Card"
-                    android:layout_width="80dp"
-                    android:layout_height="100dp"
+                    android:layout_width="98dp"
+                    android:layout_height="115dp"
                     android:layout_marginRight="20dp"
-                    android:src="@drawable/bag" />
+                    android:src="@drawable/BWATCH" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Bag Store"
+                    android:text="Watch Store"
                     android:textSize="16sp"
                     android:textColor="#000000"
                     android:textStyle="bold" />
@@ -151,22 +151,22 @@
 
                 <ImageView
                     android:id="@+id/c1Card"
-                    android:layout_width="80dp"
-                    android:layout_height="100dp"
+                    android:layout_width="107dp"
+                    android:layout_height="match_parent"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/bag" />
+                    android:src="@drawable/AFAN" />
 
                 <ImageView
                     android:id="@+id/c2Card"
-                    android:layout_width="80dp"
-                    android:layout_height="100dp"
+                    android:layout_width="95dp"
+                    android:layout_height="match_parent"
                     android:layout_marginRight="20dp"
-                    android:src="@drawable/bag" />
+                    android:src="@drawable/BFAN" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Bag Store"
+                    android:text="Fan Store"
                     android:textSize="16sp"
                     android:textColor="#000000"
                     android:textStyle="bold" />
@@ -181,22 +181,22 @@
 
                 <ImageView
                     android:id="@+id/d1Card"
-                    android:layout_width="80dp"
-                    android:layout_height="100dp"
+                    android:layout_width="107dp"
+                    android:layout_height="130dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/bag" />
+                    android:src="@drawable/ACAME" />
 
                 <ImageView
                     android:id="@+id/d2Card"
-                    android:layout_width="80dp"
-                    android:layout_height="100dp"
+                    android:layout_width="93dp"
+                    android:layout_height="130dp"
                     android:layout_marginRight="20dp"
-                    android:src="@drawable/bag" />
+                    android:src="@drawable/BCAME" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Bag Store"
+                    android:text="Camera Store"
                     android:textColor="#000000"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -212,22 +212,22 @@
 
                 <ImageView
                     android:id="@+id/e1Card"
-                    android:layout_width="80dp"
-                    android:layout_height="100dp"
+                    android:layout_width="112dp"
+                    android:layout_height="130dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/bag" />
+                    android:src="@drawable/ABOOKBAG" />
 
                 <ImageView
                     android:id="@+id/e2Card"
-                    android:layout_width="80dp"
-                    android:layout_height="100dp"
+                    android:layout_width="88dp"
+                    android:layout_height="130dp"
                     android:layout_marginRight="20dp"
-                    android:src="@drawable/bag" />
+                    android:src="@drawable/BBOOKBAG" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Bag Store"
+                    android:text="Bookbag Store"
                     android:textColor="#000000"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -242,22 +242,22 @@
 
                 <ImageView
                     android:id="@+id/f1Card"
-                    android:layout_width="80dp"
-                    android:layout_height="100dp"
+                    android:layout_width="105dp"
+                    android:layout_height="130dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/bag" />
+                    android:src="@drawable/Askin" />
 
                 <ImageView
                     android:id="@+id/f2Card"
-                    android:layout_width="80dp"
-                    android:layout_height="100dp"
+                    android:layout_width="93dp"
+                    android:layout_height="match_parent"
                     android:layout_marginRight="20dp"
-                    android:src="@drawable/bag" />
+                    android:src="@drawable/Bskin" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Bag Store"
+                    android:text="Skin care Store"
                     android:textSize="16sp"
                     android:textColor="#000000"
                     android:textStyle="bold" />

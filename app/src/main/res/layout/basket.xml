@@ -72,22 +72,15 @@
 
                 <ImageView
                     android:id="@+id/a1Card"
-                    android:layout_width="80dp"
-                    android:layout_height="100dp"
+                    android:layout_width="137dp"
+                    android:layout_height="120dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/bag" />
-
-                <ImageView
-                    android:id="@+id/a2Card"
-                    android:layout_width="80dp"
-                    android:layout_height="100dp"
-                    android:layout_marginRight="20dp"
-                    android:src="@drawable/bag" />
+                    android:src="@drawable/bi" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Happy Bag Store\nBrown Handbag\nQty:1"
+                    android:layout_width="290dp"
+                    android:layout_height="89dp"
+                    android:text="\n\n\Bike\  \nQty:1"
                     android:textColor="#000000"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -102,22 +95,15 @@
 
                 <ImageView
                     android:id="@+id/b1Card"
-                    android:layout_width="80dp"
-                    android:layout_height="100dp"
+                    android:layout_width="139dp"
+                    android:layout_height="match_parent"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/bag" />
-
-                <ImageView
-                    android:id="@+id/b2Card"
-                    android:layout_width="80dp"
-                    android:layout_height="100dp"
-                    android:layout_marginRight="20dp"
-                    android:src="@drawable/bag" />
+                    android:src="@drawable/womenshoes" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Happy Bag Store\nBrown Handbag\nQty:1"
+                    android:text="\n\Women shoes\nBrown\nQty:1"
                     android:textColor="#000000"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -131,22 +117,15 @@
 
                 <ImageView
                     android:id="@+id/c1Card"
-                    android:layout_width="80dp"
-                    android:layout_height="100dp"
+                    android:layout_width="139dp"
+                    android:layout_height="match_parent"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/bag" />
-
-                <ImageView
-                    android:id="@+id/c2Card"
-                    android:layout_width="80dp"
-                    android:layout_height="100dp"
-                    android:layout_marginRight="20dp"
-                    android:src="@drawable/bag" />
+                    android:src="@drawable/machine" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Happy Bag Store\nBrown Handbag\nQty:1"
+                    android:text="\n\Washing machine\nQty:1"
                     android:textColor="#000000"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -161,22 +140,15 @@
 
                 <ImageView
                     android:id="@+id/d1Card"
-                    android:layout_width="80dp"
-                    android:layout_height="100dp"
+                    android:layout_width="143dp"
+                    android:layout_height="130dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/bag" />
-
-                <ImageView
-                    android:id="@+id/d2Card"
-                    android:layout_width="80dp"
-                    android:layout_height="100dp"
-                    android:layout_marginRight="20dp"
-                    android:src="@drawable/bag" />
+                    android:src="@drawable/mobilephone" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Happy Bag Store\nBrown Handbag\nQty:1"
+                    android:text="\n\Mobile phone\nQty:1"
                     android:textColor="#000000"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -192,22 +164,15 @@
 
                 <ImageView
                     android:id="@+id/e1Card"
-                    android:layout_width="80dp"
-                    android:layout_height="100dp"
+                    android:layout_width="150dp"
+                    android:layout_height="120dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/bag" />
-
-                <ImageView
-                    android:id="@+id/e2Card"
-                    android:layout_width="80dp"
-                    android:layout_height="100dp"
-                    android:layout_marginRight="20dp"
-                    android:src="@drawable/bag" />
+                    android:src="@drawable/furnituresssss" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Happy Bag Store\nBrown Handbag\nQty:1"
+                    android:text="\n\Furniture\nQty:1"
                     android:textColor="#000000"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -222,22 +187,15 @@
 
                 <ImageView
                     android:id="@+id/f1Card"
-                    android:layout_width="80dp"
-                    android:layout_height="100dp"
+                    android:layout_width="159dp"
+                    android:layout_height="130dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/bag" />
-
-                <ImageView
-                    android:id="@+id/f2Card"
-                    android:layout_width="80dp"
-                    android:layout_height="100dp"
-                    android:layout_marginRight="20dp"
-                    android:src="@drawable/bag" />
+                    android:src="@drawable/televsion" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Happy Bag Store\nBrown Handbag\nQty:1"
+                    android:text="\n\Television\nQty:1"
                     android:textColor="#000000"
                     android:textSize="16sp"
                     android:textStyle="bold" />

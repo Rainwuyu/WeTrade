@@ -193,7 +193,7 @@
                     android:layout_marginStart="16dp"
                     android:backgroundTint="@android:color/holo_green_dark"
                     android:onClick="Check"
-                    android:text="Women's Fashion"
+                    android:text="Beauty and Personal Care"
                     android:textSize="20sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -216,13 +216,18 @@
                     android:src="@drawable/bag" />
 
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Bag Store"
-                    android:textColor="#000000"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                <Button
+                    android:id="@+id/e2Card"
+                    android:layout_width="268dp"
+                    android:layout_height="72dp"
+                    android:layout_marginStart="16dp"
+                    android:backgroundTint="@android:color/holo_green_dark"
+                    android:onClick="Check"
+                    android:text="Electronics"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.776" />
 
             </TableRow>
 
@@ -239,13 +244,46 @@
                     android:layout_marginRight="10dp"
                     android:src="@drawable/bag" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Bag Store"
-                    android:textSize="16sp"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
+                <Button
+                    android:id="@+id/f2Card"
+                    android:layout_width="268dp"
+                    android:layout_height="72dp"
+                    android:layout_marginStart="16dp"
+                    android:backgroundTint="@android:color/holo_green_dark"
+                    android:onClick="Check"
+                    android:text="Pet Accessories"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.776" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginTop="1dp"
+                android:gravity="left">
+
+                <ImageView
+                    android:id="@+id/g1Card"
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/bag" />
+
+                <Button
+                    android:id="@+id/g2Card"
+                    android:layout_width="268dp"
+                    android:layout_height="72dp"
+                    android:layout_marginStart="16dp"
+                    android:backgroundTint="@android:color/holo_green_dark"
+                    android:onClick="Check"
+                    android:text="Toys"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.776" />
 
             </TableRow>
 

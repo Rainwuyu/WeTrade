@@ -47,16 +47,18 @@ public class UploadActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        ImageView menu = findViewById(R.id.imageView2);
-        ImageView home = findViewById(R.id.home);
-        ImageView following = findViewById(R.id.star);
-        ImageView upload = findViewById(R.id.add);
-        ImageView me = findViewById(R.id.humanIcon);
-        ImageView settings = findViewById(R.id.accountSettings);
+
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.upload);
         initView();
+        ImageView home = findViewById(R.id.home1);
+        ImageView following = findViewById(R.id.star1);
+        ImageView upload = findViewById(R.id.add1);
+        ImageView me = findViewById(R.id.humanIcon1);
+        ImageView settings = findViewById(R.id.accountSettings1);
+        ImageView menu = findViewById(R.id.imageView2);
+
 
         uploadImage = (Button) findViewById(R.id.UploadPhotosButton);
         uploadAll = (Button) findViewById(R.id.button2);

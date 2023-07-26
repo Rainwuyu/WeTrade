@@ -95,7 +95,7 @@
                     android:layout_width="91dp"
                     android:layout_height="105dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/Babyclothes" />
+                    android:src="@drawable/babyclothes" />
 
 
                 <Button
@@ -126,7 +126,7 @@
                     android:layout_width="80dp"
                     android:layout_height="100dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/Mensfansion" />
+                    android:src="@drawable/mensfansion" />
 
 
                 <Button
@@ -154,7 +154,7 @@
                     android:layout_width="80dp"
                     android:layout_height="100dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/Womensfansion" />
+                    android:src="@drawable/womensfansion" />
 
 
                 <Button
@@ -183,7 +183,7 @@
                     android:layout_width="80dp"
                     android:layout_height="100dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/Beauty" />
+                    android:src="@drawable/beauty" />
 
 
                 <Button
@@ -213,7 +213,7 @@
                     android:layout_width="80dp"
                     android:layout_height="100dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/Electronics" />
+                    android:src="@drawable/electronics" />
 
 
                 <Button
@@ -270,7 +270,7 @@
                     android:layout_width="80dp"
                     android:layout_height="100dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/TTT"
+                    android:src="@drawable/ttt"/>
                 <Button
                     android:id="@+id/g2Card"
                     android:layout_width="268dp"
@@ -297,7 +297,7 @@
                     android:layout_width="80dp"
                     android:layout_height="100dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/Je" />
+                    android:src="@drawable/je" />
 
                 <Button
                     android:id="@+id/h2Card"
@@ -381,7 +381,7 @@
                     android:layout_width="80dp"
                     android:layout_height="100dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/CAR" />
+                    android:src="@drawable/car" />
 
                 <Button
                     android:id="@+id/k2Card"
@@ -409,7 +409,7 @@
                     android:layout_width="80dp"
                     android:layout_height="100dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/PHONE" />
+                    android:src="@drawable/phone" />
 
                 <Button
                     android:id="@+id/l2Card"

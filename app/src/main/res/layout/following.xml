@@ -102,7 +102,7 @@
                     android:layout_width="95dp"
                     android:layout_height="match_parent"
                     android:layout_marginRight="20dp"
-                    android:src="@drawable/IPHONE" />
+                    android:src="@drawable/iphone" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -125,14 +125,14 @@
                     android:layout_width="105dp"
                     android:layout_height="match_parent"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/AWATCH" />
+                    android:src="@drawable/awatch" />
 
                 <ImageView
                     android:id="@+id/b2Card"
                     android:layout_width="98dp"
                     android:layout_height="115dp"
                     android:layout_marginRight="20dp"
-                    android:src="@drawable/BWATCH" />
+                    android:src="@drawable/bwatch" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -154,14 +154,14 @@
                     android:layout_width="107dp"
                     android:layout_height="match_parent"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/AFAN" />
+                    android:src="@drawable/afan" />
 
                 <ImageView
                     android:id="@+id/c2Card"
                     android:layout_width="95dp"
                     android:layout_height="match_parent"
                     android:layout_marginRight="20dp"
-                    android:src="@drawable/BFAN" />
+                    android:src="@drawable/bfan" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -184,14 +184,14 @@
                     android:layout_width="107dp"
                     android:layout_height="130dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/ACAME" />
+                    android:src="@drawable/acame" />
 
                 <ImageView
                     android:id="@+id/d2Card"
                     android:layout_width="93dp"
                     android:layout_height="130dp"
                     android:layout_marginRight="20dp"
-                    android:src="@drawable/BCAME" />
+                    android:src="@drawable/bcame" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -215,14 +215,14 @@
                     android:layout_width="112dp"
                     android:layout_height="130dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/ABOOKBAG" />
+                    android:src="@drawable/abookbag" />
 
                 <ImageView
                     android:id="@+id/e2Card"
                     android:layout_width="88dp"
                     android:layout_height="130dp"
                     android:layout_marginRight="20dp"
-                    android:src="@drawable/BBOOKBAG" />
+                    android:src="@drawable/bbookbag" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -245,14 +245,14 @@
                     android:layout_width="105dp"
                     android:layout_height="130dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/Askin" />
+                    android:src="@drawable/askin" />
 
                 <ImageView
                     android:id="@+id/f2Card"
                     android:layout_width="93dp"
                     android:layout_height="match_parent"
                     android:layout_marginRight="20dp"
-                    android:src="@drawable/Bskin" />
+                    android:src="@drawable/bskin" />
 
                 <TextView
                     android:layout_width="wrap_content"

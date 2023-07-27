@@ -73,24 +73,24 @@
                 android:layout_marginTop="4dp"
                 android:gravity="left">
 
-                <ImageView
+                <!--<ImageView
                     android:id="@+id/a1Card"
                     android:layout_width="80dp"
                     android:layout_height="100dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/bag" />
+                    android:src="" />-->
 
                 <ImageView
                     android:id="@+id/a2Card"
                     android:layout_width="80dp"
                     android:layout_height="100dp"
                     android:layout_marginRight="20dp"
-                    android:src="@drawable/bag" />
+                    android:src="@drawable/televsion" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Happy Bag Store\nStatus: Order Dispatched\nRef.No.: 12341234123"
+                    android:text="Happy TV Store\nStatus: Order Dispatched\nRef.No.: 12341234123"
                     android:textColor="#000000"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -103,24 +103,24 @@
                 android:layout_marginTop="1dp"
                 android:gravity="left">
 
-                <ImageView
+                <!--<ImageView
                     android:id="@+id/b1Card"
                     android:layout_width="80dp"
                     android:layout_height="100dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/bag" />
+                    android:src="@drawable/bag" />-->
 
                 <ImageView
                     android:id="@+id/b2Card"
                     android:layout_width="80dp"
                     android:layout_height="100dp"
                     android:layout_marginRight="20dp"
-                    android:src="@drawable/bag" />
+                    android:src="@drawable/womenshoes" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Happy Bag Store\nStatus: Order Delivered\nRef.No.: 12341234122"
+                    android:text="Big Shoe Store\nStatus: Order Delivered\nRef.No.: 12341234122"
                     android:textSize="16sp"
                     android:textColor="#000000"
                     android:textStyle="bold" />
@@ -132,24 +132,24 @@
                 android:layout_marginTop="1dp"
                 android:gravity="left">
 
-                <ImageView
+               <!-- <ImageView
                     android:id="@+id/c1Card"
                     android:layout_width="80dp"
                     android:layout_height="100dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/bag" />
+                    android:src="@drawable/bag" />-->
 
                 <ImageView
                     android:id="@+id/c2Card"
                     android:layout_width="80dp"
                     android:layout_height="100dp"
                     android:layout_marginRight="20dp"
-                    android:src="@drawable/bag" />
+                    android:src="@drawable/machine" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Happy Bag Store\nStatus: Order Complete\nRef.No.: 12341234121"
+                    android:text="Electronics Store\nStatus: Order Complete\nRef.No.: 12341234121"
                     android:textSize="16sp"
                     android:textColor="#000000"
                     android:textStyle="bold" />
@@ -162,24 +162,24 @@
                 android:layout_marginTop="1dp"
                 android:gravity="left">
 
-                <ImageView
+               <!-- <ImageView
                     android:id="@+id/d1Card"
                     android:layout_width="80dp"
                     android:layout_height="100dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/bag" />
+                    android:src="@drawable/bag" />-->
 
                 <ImageView
                     android:id="@+id/d2Card"
                     android:layout_width="80dp"
                     android:layout_height="100dp"
                     android:layout_marginRight="20dp"
-                    android:src="@drawable/bag" />
+                    android:src="@drawable/mobilephone" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Happy Bag Store\nStatus: Order Complete\nRef.No.: 12341234120"
+                    android:text="Electronics Store\nStatus: Order Complete\nRef.No.: 12341234120"
                     android:textColor="#000000"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -193,12 +193,12 @@
                 android:layout_marginTop="1dp"
                 android:gravity="left">
 
-                <ImageView
+                <!--<ImageView
                     android:id="@+id/e1Card"
                     android:layout_width="80dp"
                     android:layout_height="100dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/bag" />
+                    android:src="@drawable/bag" />-->
 
                 <ImageView
                     android:id="@+id/e2Card"
@@ -230,12 +230,12 @@
                     android:layout_marginRight="10dp"
                     android:src="@drawable/bag" />
 
-                <ImageView
+                <!--<ImageView
                     android:id="@+id/f2Card"
                     android:layout_width="80dp"
                     android:layout_height="100dp"
                     android:layout_marginRight="20dp"
-                    android:src="@drawable/bag" />
+                    android:src="@drawable/bag" />-->
 
                 <TextView
                     android:layout_width="wrap_content"

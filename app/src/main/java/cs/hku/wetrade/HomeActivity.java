@@ -10,6 +10,7 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Base64;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -35,6 +36,7 @@ public class HomeActivity extends AppCompatActivity {
         ImageView settings = findViewById(R.id.accountSettings);
         ImageView menu = findViewById(R.id.imageView2);
 //        pic = findViewById(R.id.imageView4);
+        Button add = findViewById(R.id.button);
 
         initItem();
         RecyclerView recyclerView = (RecyclerView)findViewById(R.id.recyclerView);
@@ -42,6 +44,14 @@ public class HomeActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(linearLayoutManager);
         HomeAdapter homeAdapter = new HomeAdapter(ItemList);
         recyclerView.setAdapter(homeAdapter);
+
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(HomeActivity.this, BasketActivity.class);
+                startActivity(intent);
+            }
+        });
 
         home.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -95,6 +95,8 @@ public class UploadActivity extends AppCompatActivity {
                 } else {
                     itemDBHelper.insertData(iname, image, getContent, pric, desc, stoc, MeActivity.uname);
                     Toast.makeText(UploadActivity.this, "Upload successfully!", Toast.LENGTH_SHORT).show();
+                    Intent intent=new Intent(UploadActivity.this, UploadSuccessfulActivity.class);
+                    startActivity(intent);
                 }
             }
         });

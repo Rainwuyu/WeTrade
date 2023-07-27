@@ -35,6 +35,8 @@ public class HomeActivity extends AppCompatActivity {
         ImageView me = findViewById(R.id.humanIcon);
         ImageView settings = findViewById(R.id.accountSettings);
         ImageView menu = findViewById(R.id.imageView2);
+        ImageView basket = findViewById(R.id.imageView);
+
 //        pic = findViewById(R.id.imageView4);
         Button add = findViewById(R.id.button);
 
@@ -96,6 +98,14 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(HomeActivity.this, MenuActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        basket.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(HomeActivity.this, BasketActivity.class);
                 startActivity(intent);
             }
         });

@@ -40,6 +40,7 @@ public class UploadActivity extends AppCompatActivity {
     EditText description, itemname, stock, price;
     String image;
     private String getContent;
+    String filePath = "/storage/emulated/0/Pictures/IMG_20230802_133256.jpg";
     String[] mPermissionList = new String[]{
             Manifest.permission.WRITE_EXTERNAL_STORAGE,
             Manifest.permission.READ_EXTERNAL_STORAGE};
@@ -93,7 +94,7 @@ public class UploadActivity extends AppCompatActivity {
                 if (desc.equals("") || iname.equals("") || String.valueOf(stoc).equals("") || String.valueOf(pric).equals("") || image.equals("")) {
                     Toast.makeText(UploadActivity.this, "Incomplete information!", Toast.LENGTH_SHORT).show();
                 } else {
-                    itemDBHelper.insertData(iname, image, getContent, pric, desc, stoc, MeActivity.uname);
+                    itemDBHelper.insertData(iname, filePath, getContent, pric, desc, stoc, MeActivity.uname);
                     Toast.makeText(UploadActivity.this, "Upload successfully!", Toast.LENGTH_SHORT).show();
                     Intent intent=new Intent(UploadActivity.this, UploadSuccessfulActivity.class);
                     startActivity(intent);
@@ -220,8 +221,8 @@ public class UploadActivity extends AppCompatActivity {
 
     // Gets the Uri returned by the album
     @SuppressLint("NewApi")
-    private static String getRealPathFromUri(Context context, Uri uri) {
-        String filePath = null;
+    private static String getRealPathFromUri(Context context, Uri uri, String filePath) {
+
         if (DocumentsContract.isDocumentUri(context, uri)) {
             // If it is a document uri, it is processed through the document id
             String documentId = DocumentsContract.getDocumentId(uri);
@@ -284,8 +285,9 @@ public class UploadActivity extends AppCompatActivity {
             switch (requestCode) {
                 case REQUEST_PICK_IMAGE:
                     if (data != null) {
-                        String realPathFromUri = UploadActivity.getRealPathFromUri(this, data.getData());
+                        String realPathFromUri = UploadActivity.getRealPathFromUri(this, data.getData(), filePath);
                         image = bitmapToString(realPathFromUri);
+                        filePath = realPathFromUri;
                         showImage(realPathFromUri, picture);
                     } else {
                         Toast.makeText(this, "The picture is damaged, please re-select.", Toast.LENGTH_SHORT).show();

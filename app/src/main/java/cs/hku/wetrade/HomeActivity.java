@@ -1,5 +1,7 @@
 package cs.hku.wetrade;
 
+import static cs.hku.wetrade.UploadActivity.getSmallBitmap;
+
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
@@ -39,6 +41,9 @@ public class HomeActivity extends AppCompatActivity {
 
 //        pic = findViewById(R.id.imageView4);
         Button add = findViewById(R.id.button);
+        Button add2 = findViewById(R.id.button2);
+        Button add3 = findViewById(R.id.button3);
+        Button add4 = findViewById(R.id.button4);
 
         initItem();
         RecyclerView recyclerView = (RecyclerView)findViewById(R.id.recyclerView);
@@ -48,6 +53,30 @@ public class HomeActivity extends AppCompatActivity {
         recyclerView.setAdapter(homeAdapter);
 
         add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(HomeActivity.this, BasketActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        add2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(HomeActivity.this, BasketActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        add3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(HomeActivity.this, BasketActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        add4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(HomeActivity.this, BasketActivity.class);
@@ -128,7 +157,8 @@ public class HomeActivity extends AppCompatActivity {
                 @SuppressLint("Range") float price = cursor.getFloat(cursor.getColumnIndex("price"));
                 @SuppressLint("Range") String category = cursor.getString(cursor.getColumnIndex("category"));
                 @SuppressLint("Range") String seller = cursor.getString(cursor.getColumnIndex("seller"));
-                Bitmap bimage = stringToBitmap(image);
+//                Bitmap bimage = stringToBitmap(image);
+                Bitmap bimage = getSmallBitmap(image);
 //                pic.setImageBitmap(bimage);
                 if (!name.equals("")) {
                     HomeItem homeItem = new HomeItem(id, name, bimage, stock, price, category, seller);
